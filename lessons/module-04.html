@@ -1,0 +1,1405 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b14">
+
+  <meta name="description" content="Master AI prompt engineering from beginner to advanced. Learn cinematic image and video prompts in Telugu and English.">
+
+  <title>Module 04: Professional Prompt Engineering | AI Creator School</title>
+
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    .lesson-page {
+      max-width: 1050px;
+      margin: auto;
+      padding: 35px 20px 80px;
+    }
+
+    .lesson-label {
+      color: #a78bfa;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .lesson-page h1 {
+      font-size: clamp(30px, 5vw, 46px);
+      line-height: 1.2;
+      margin: 15px 0;
+    }
+
+    .lesson-page h2 {
+      font-size: 27px;
+      margin: 35px 0 15px;
+    }
+
+    .lesson-page h3 {
+      font-size: 19px;
+      margin: 24px 0 10px;
+    }
+
+    .lesson-page p,
+    .lesson-page li {
+      line-height: 1.85;
+    }
+
+    .lesson-card {
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 16px;
+      padding: 23px;
+      margin: 22px 0;
+    }
+
+    .lesson-page .telugu {
+      color: #e4e7f0;
+    }
+
+    .lesson-page .english {
+      color: #b7c2d8;
+    }
+
+    .lesson-page .term {
+      color: #c4b5fd;
+      font-weight: 700;
+    }
+
+    .lesson-page table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .lesson-page th,
+    .lesson-page td {
+      border: 1px solid rgba(255,255,255,.15);
+      padding: 12px;
+      text-align: left;
+      line-height: 1.6;
+    }
+
+    .lesson-page th {
+      background: rgba(139,92,246,.13);
+    }
+
+    .lesson-page details {
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 12px;
+      padding: 16px;
+      margin: 12px 0;
+    }
+
+    .lesson-page summary {
+      cursor: pointer;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    .lesson-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 25px 0;
+    }
+
+    .lesson-nav a,
+    .lesson-page .back-link {
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,.15);
+      padding: 10px 14px;
+      border-radius: 9px;
+      text-decoration: none;
+    }
+
+    .lesson-page .prompt-box {
+      background: #050811;
+      border: 1px solid rgba(255,255,255,.13);
+      padding: 18px;
+      border-radius: 12px;
+      overflow-wrap: anywhere;
+      line-height: 1.85;
+      margin: 15px 0;
+    }
+
+    .lesson-page .example {
+      background: rgba(139,92,246,.09);
+      border-left: 4px solid #8b5cf6;
+      border-radius: 0 10px 10px 0;
+      padding: 16px;
+      margin: 18px 0;
+    }
+
+    .lesson-page .warning {
+      background: rgba(245,158,11,.08);
+      border-left: 4px solid #f59e0b;
+      border-radius: 0 10px 10px 0;
+      padding: 16px;
+      margin: 18px 0;
+    }
+
+    .lesson-footer {
+      border-top: 1px solid rgba(255,255,255,.15);
+      margin-top: 45px;
+      padding-top: 25px;
+    }
+
+    @media(max-width:600px) {
+      .lesson-page {
+        padding: 25px 15px 55px;
+      }
+
+      .lesson-card {
+        padding: 17px;
+      }
+
+      .lesson-page table {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<main class="lesson-page">
+
+  <header>
+    <a class="back-link" href="../index.html">
+      ← Back to AI Creator School
+    </a>
+
+    <br><br>
+
+    <div class="lesson-label">MODULE 04 · BEGINNER TO ADVANCED</div>
+
+    <h1>Professional Prompt Engineering</h1>
+
+    <p class="english">
+      Learn to write clear, detailed and structured prompts
+      for AI image and video generation.
+    </p>
+
+    <p class="telugu">
+      AIకి ఏం కావాలో స్పష్టంగా చెప్పడం Prompt Engineering.
+      ఒక సాధారణ sentence‌ను professional creative prompt‌గా
+      ఎలా మార్చాలో ఈ Module‌లో నేర్చుకుంటారు.
+    </p>
+
+    <div class="lesson-card">
+      <h3>Learning Objectives</h3>
+      <ul>
+        <li>Understand prompts and prompt engineering.</li>
+        <li>Learn a reusable prompt structure.</li>
+        <li>Describe subjects, environments and actions.</li>
+        <li>Use lighting, composition and camera terminology.</li>
+        <li>Write image-generation prompts.</li>
+        <li>Write text-to-video and image-to-video prompts.</li>
+        <li>Understand negative prompts and model limitations.</li>
+        <li>Improve prompts through systematic iteration.</li>
+        <li>Create professional prompts for practical projects.</li>
+      </ul>
+    </div>
+
+    <nav class="lesson-nav" aria-label="Module lessons">
+      <a href="#lesson-1">Lesson 01</a>
+      <a href="#lesson-2">Lesson 02</a>
+      <a href="#lesson-3">Lesson 03</a>
+      <a href="#lesson-4">Lesson 04</a>
+      <a href="#lesson-5">Lesson 05</a>
+      <a href="#lesson-6">Lesson 06</a>
+      <a href="#lesson-7">Lesson 07</a>
+      <a href="#lesson-8">Lesson 08</a>
+      <a href="#lesson-9">Lesson 09</a>
+      <a href="#lesson-10">Lesson 10</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+  </header>
+
+
+  <!-- LESSON 01 -->
+
+  <section id="lesson-1">
+
+    <div class="lesson-label">LESSON 01</div>
+    <h2>What is Prompt Engineering?</h2>
+
+    <p class="english">
+      Prompt engineering is the practice of designing,
+      structuring and refining instructions given to an AI
+      system to guide its output toward a desired result.
+    </p>
+
+    <p class="telugu">
+      Prompt Engineering అంటే AIకి ఇచ్చే instructions‌ను
+      జాగ్రత్తగా రూపొందించడం, అవసరమైన వివరాలు జోడించడం,
+      వచ్చిన result ఆధారంగా prompt‌ను మెరుగుపరచడం.
+    </p>
+
+    <h3>Why Does Prompt Quality Matter?</h3>
+
+    <ul>
+      <li>It communicates your creative intention.</li>
+      <li>It helps describe the subject and environment.</li>
+      <li>It guides the visual style and composition.</li>
+      <li>It can reduce unwanted variations.</li>
+      <li>It makes your workflow more repeatable.</li>
+    </ul>
+
+    <div class="example">
+      <h3>Basic Prompt</h3>
+      <div class="prompt-box">
+        A dog.
+      </div>
+
+      <h3>Improved Prompt</h3>
+      <div class="prompt-box">
+        A golden retriever running across a green meadow,
+        joyful expression, soft morning sunlight,
+        cinematic photography, natural colors,
+        medium-wide composition.
+      </div>
+
+      <p>
+        రెండో prompt‌లో subject, action, location,
+        lighting మరియు visual style స్పష్టంగా ఉన్నాయి.
+      </p>
+    </div>
+
+    <h3>Prompt Engineering Is Not Magic</h3>
+
+    <p>
+      A longer prompt is not automatically a better prompt.
+      Clear, relevant and consistent instructions are more
+      useful than a collection of unrelated descriptive words.
+    </p>
+
+    <p>
+      ప్రతి model prompt‌ను వేర్వేరు విధంగా interpret చేయవచ్చు.
+      అందువల్ల ఒకే prompt అన్ని models‌లో ఒకే result ఇస్తుందని
+      అనుకోకూడదు.
+    </p>
+
+  </section>
+
+
+  <!-- LESSON 02 -->
+
+  <section id="lesson-2">
+
+    <div class="lesson-label">LESSON 02</div>
+    <h2>The Complete Prompt Structure</h2>
+
+    <p class="english">
+      A structured prompt helps organize the information
+      required for a creative generation task.
+    </p>
+
+    <p class="telugu">
+      ఒక professional prompt‌లో ఏమేమి ఉండాలో తెలుసుకోవడానికి
+      ఈ structure ఉపయోగించవచ్చు. ప్రతి prompt‌లో అన్ని
+      sections తప్పనిసరి కావు. Project అవసరాన్ని బట్టి
+      వాటిని select చేసుకోవాలి.
+    </p>
+
+    <div class="lesson-card">
+      <h3>10-Part Prompt Framework</h3>
+
+      <ol>
+        <li><strong>Subject:</strong> Main person, object or scene.</li>
+        <li><strong>Action:</strong> What is happening?</li>
+        <li><strong>Environment:</strong> Where does it happen?</li>
+        <li><strong>Appearance:</strong> Important visual details.</li>
+        <li><strong>Composition:</strong> How is the scene framed?</li>
+        <li><strong>Camera:</strong> Viewpoint and camera behavior.</li>
+        <li><strong>Lighting:</strong> Light source and mood.</li>
+        <li><strong>Style:</strong> Visual or artistic direction.</li>
+        <li><strong>Motion:</strong> Movement, when creating video.</li>
+        <li><strong>Constraints:</strong> Details to avoid or preserve.</li>
+      </ol>
+    </div>
+
+    <h3>Example: Product Advertisement</h3>
+
+    <div class="prompt-box">
+      <strong>Subject:</strong> A premium black wristwatch.
+
+      <br><br>
+
+      <strong>Action:</strong> The watch is displayed
+      on a polished stone platform.
+
+      <br><br>
+
+      <strong>Environment:</strong> A dark luxury studio.
+
+      <br><br>
+
+      <strong>Appearance:</strong> Detailed metallic body,
+      clean glass surface and elegant design.
+
+      <br><br>
+
+      <strong>Composition:</strong> Close-up product shot,
+      centered composition.
+
+      <br><br>
+
+      <strong>Camera:</strong> Three-quarter angle.
+
+      <br><br>
+
+      <strong>Lighting:</strong> Controlled studio lighting
+      with soft highlights.
+
+      <br><br>
+
+      <strong>Style:</strong> Premium commercial photography.
+
+      <br><br>
+
+      <strong>Constraints:</strong> No extra watches,
+      no distorted product geometry.
+    </div>
+
+    <h3>Why Use This Structure?</h3>
+
+    <p>
+      If the result is wrong, you can identify which
+      part of the prompt needs improvement instead of
+      rewriting everything randomly.
+    </p>
+
+  </section>
+
+
+  <!-- LESSON 03 -->
+
+  <section id="lesson-3">
+
+    <div class="lesson-label">LESSON 03</div>
+    <h2>Subject, Action & Environment</h2>
+
+    <p class="english">
+      The subject is the main focus of the generation.
+      Action describes what the subject is doing.
+      Environment describes the surrounding location.
+    </p>
+
+    <p class="telugu">
+      Subject అంటే ప్రధానంగా కనిపించాల్సిన వ్యక్తి లేదా వస్తువు.
+      Action అంటే అది ఏం చేస్తోంది? Environment అంటే అది
+      ఎక్కడ ఉంది?
+    </p>
+
+    <h3>1. Subject</h3>
+
+    <p>Examples:</p>
+    <ul>
+      <li>A young astronaut.</li>
+      <li>A vintage motorcycle.</li>
+      <li>A futuristic robot.</li>
+      <li>A luxury perfume bottle.</li>
+      <li>A traditional Indian dancer.</li>
+    </ul>
+
+    <h3>2. Action</h3>
+
+    <p>Examples:</p>
+    <ul>
+      <li>Walking slowly.</li>
+      <li>Running toward the camera.</li>
+      <li>Looking toward the horizon.</li>
+      <li>Holding a product.</li>
+      <li>Turning around naturally.</li>
+    </ul>
+
+    <h3>3. Environment</h3>
+
+    <p>Examples:</p>
+    <ul>
+      <li>A busy Indian street.</li>
+      <li>A futuristic city.</li>
+      <li>A quiet mountain village.</li>
+      <li>A luxury studio.</li>
+      <li>A tropical beach at sunrise.</li>
+    </ul>
+
+    <div class="example">
+      <strong>Combined Prompt:</strong>
+
+      <div class="prompt-box">
+        A young astronaut walking slowly across a red
+        desert landscape, distant futuristic space station,
+        dramatic sunset in the background.
+      </div>
+    </div>
+
+    <h3>Common Mistake</h3>
+
+    <p>
+      ఒకే subject‌కు ఒకేసారి చాలా conflicting actions ఇవ్వకండి.
+      ఉదాహరణకు, ఒక character simultaneously standing still,
+      running and sitting అని రాస్తే model‌కు contradictory
+      instructions అందుతాయి.
+    </p>
+
+  </section>
+
+
+  <!-- LESSON 04 -->
+
+  <section id="lesson-4">
+
+    <div class="lesson-label">LESSON 04</div>
+    <h2>Camera Angles, Shots & Composition</h2>
+
+    <p class="english">
+      Camera language describes how the viewer sees the subject.
+      It helps communicate framing, perspective and visual emphasis.
+    </p>
+
+    <p class="telugu">
+      Camera angle, shot size మరియు composition ద్వారా
+      మనం subject‌ను ఎలా చూపించాలనుకుంటున్నామో AIకి
+      వివరించవచ్చు.
+    </p>
+
+    <h3>Common Shot Types</h3>
+
+    <table>
+      <tr>
+        <th>Shot</th>
+        <th>Meaning</th>
+        <th>Typical Use</th>
+      </tr>
+      <tr>
+        <td>Extreme Wide Shot</td>
+        <td>Very wide view of the environment.</td>
+        <td>Landscape and scale.</td>
+      </tr>
+      <tr>
+        <td>Wide Shot</td>
+        <td>Subject shown with surrounding space.</td>
+        <td>Establishing a scene.</td>
+      </tr>
+      <tr>
+        <td>Full Shot</td>
+        <td>Entire person or object in frame.</td>
+        <td>Character presentation.</td>
+      </tr>
+      <tr>
+        <td>Medium Shot</td>
+        <td>Usually waist-up framing.</td>
+        <td>Dialogue and action.</td>
+      </tr>
+      <tr>
+        <td>Close-Up</td>
+        <td>Face or important object fills the frame.</td>
+        <td>Emotion and detail.</td>
+      </tr>
+      <tr>
+        <td>Extreme Close-Up</td>
+        <td>Very tight detail.</td>
+        <td>Eyes, texture and product details.</td>
+      </tr>
+      <tr>
+        <td>Over-the-Shoulder</td>
+        <td>Camera looks past one subject.</td>
+        <td>Conversation and interaction.</td>
+      </tr>
+    </table>
+
+    <h3>Camera Angles</h3>
+
+    <table>
+      <tr>
+        <th>Angle</th>
+        <th>Visual Effect</th>
+      </tr>
+      <tr>
+        <td>Eye-Level</td>
+        <td>Natural and direct perspective.</td>
+      </tr>
+      <tr>
+        <td>Low Angle</td>
+        <td>Subject may appear powerful or imposing.</td>
+      </tr>
+      <tr>
+        <td>High Angle</td>
+        <td>Subject is viewed from above.</td>
+      </tr>
+      <tr>
+        <td>Bird's-Eye View</td>
+        <td>Top-down view of a scene.</td>
+      </tr>
+      <tr>
+        <td>Worm's-Eye View</td>
+        <td>Very low viewpoint looking upward.</td>
+      </tr>
+      <tr>
+        <td>Dutch Angle</td>
+        <td>Tilted frame creating visual tension.</td>
+      </tr>
+    </table>
+
+    <h3>Composition Techniques</h3>
+
+    <ul>
+      <li><strong>Rule of Thirds:</strong> Position important elements along a 3×3 grid.</li>
+      <li><strong>Centered Composition:</strong> Place the main subject in the center.</li>
+      <li><strong>Symmetry:</strong> Use balanced visual arrangement.</li>
+      <li><strong>Leading Lines:</strong> Guide the viewer's attention.</li>
+      <li><strong>Negative Space:</strong> Leave intentional empty space.</li>
+      <li><strong>Foreground:</strong> Include elements close to the camera.</li>
+      <li><strong>Background:</strong> Describe what appears behind the subject.</li>
+      <li><strong>Depth:</strong> Separate foreground, subject and background.</li>
+    </ul>
+
+    <div class="prompt-box">
+      Cinematic wide shot, low-angle camera perspective,
+      strong foreground composition, distant mountains,
+      subject positioned on the right third of the frame,
+      atmospheric depth.
+    </div>
+
+  </section>
+
+
+  <!-- LESSON 05 -->
+
+  <section id="lesson-5">
+
+    <div class="lesson-label">LESSON 05</div>
+    <h2>Lighting, Color & Visual Style</h2>
+
+    <p class="english">
+      Lighting and color strongly influence the mood,
+      atmosphere and appearance of an AI-generated image.
+    </p>
+
+    <p class="telugu">
+      ఒక scene ఎలా కనిపించాలి, దాని mood ఎలా ఉండాలి అనే
+      విషయాలను Lighting మరియు Color వివరించడంలో సహాయపడతాయి.
+    </p>
+
+    <h3>Lighting Terminology</h3>
+
+    <table>
+      <tr>
+        <th>Term</th>
+        <th>Meaning</th>
+      </tr>
+      <tr>
+        <td>Soft Lighting</td>
+        <td>Gentle light with softer shadows.</td>
+      </tr>
+      <tr>
+        <td>Hard Lighting</td>
+        <td>Strong light with defined shadows.</td>
+      </tr>
+      <tr>
+        <td>Backlighting</td>
+        <td>Light coming from behind the subject.</td>
+      </tr>
+      <tr>
+        <td>Rim Lighting</td>
+        <td>Light outlining the subject's edges.</td>
+      </tr>
+      <tr>
+        <td>Golden Hour</td>
+        <td>Warm sunlight near sunrise or sunset.</td>
+      </tr>
+      <tr>
+        <td>Blue Hour</td>
+        <td>Cool ambient light around twilight.</td>
+      </tr>
+      <tr>
+        <td>Volumetric Lighting</td>
+        <td>Visible light beams interacting with atmosphere.</td>
+      </tr>
+      <tr>
+        <td>Studio Lighting</td>
+        <td>Controlled lighting setup for a subject.</td>
+      </tr>
+      <tr>
+        <td>Silhouette</td>
+        <td>Dark subject against a brighter background.</td>
+      </tr>
+    </table>
+
+    <h3>Color Terminology</h3>
+
+    <ul>
+      <li><strong>Warm Palette:</strong> Reds, oranges and yellows.</li>
+      <li><strong>Cool Palette:</strong> Blues, greens and blue-violets.</li>
+      <li><strong>Monochromatic:</strong> Variations of one color.</li>
+      <li><strong>Complementary Colors:</strong> Contrasting colors.</li>
+      <li><strong>Muted Colors:</strong> Less saturated colors.</li>
+      <li><strong>High Contrast:</strong> Strong differences between light and dark.</li>
+    </ul>
+
+    <h3>Visual Style Terminology</h3>
+
+    <ul>
+      <li>Photorealistic.</li>
+      <li>Cinematic realism.</li>
+      <li>Documentary photography.</li>
+      <li>Editorial fashion photography.</li>
+      <li>Anime-inspired illustration.</li>
+      <li>Stylized 3D animation.</li>
+      <li>Minimalist product design.</li>
+      <li>Surreal conceptual art.</li>
+    </ul>
+
+    <div class="example">
+      <strong>Lighting Practice Prompt</strong>
+      <div class="prompt-box">
+        A lone traveler standing on a mountain peak,
+        warm golden-hour backlighting, soft atmospheric haze,
+        long natural shadows, cinematic landscape photography,
+        muted earthy color palette.
+      </div>
+    </div>
+
+  </section>
+
+
+  <!-- LESSON 06 -->
+
+  <section id="lesson-6">
+
+    <div class="lesson-label">LESSON 06</div>
+    <h2>Lens, Focus & Camera Language</h2>
+
+    <p class="english">
+      Camera and lens terminology can help describe
+      perspective, framing and depth of field.
+    </p>
+
+    <p class="telugu">
+      Lens focal length, focus మరియు depth of field గురించి
+      తెలిసి ఉంటే cinematic prompts‌ను మరింత స్పష్టంగా
+      రాయగలుగుతారు.
+    </p>
+
+    <h3>Focal Length Basics</h3>
+
+    <table>
+      <tr>
+        <th>Focal Length</th>
+        <th>Typical Perspective</th>
+      </tr>
+      <tr>
+        <td>14mm–24mm</td>
+        <td>Very wide field of view.</td>
+      </tr>
+      <tr>
+        <td>24mm–35mm</td>
+        <td>Wide environmental perspective.</td>
+      </tr>
+      <tr>
+        <td>50mm</td>
+        <td>Natural-looking perspective.</td>
+      </tr>
+      <tr>
+        <td>85mm</td>
+        <td>Portrait-oriented framing.</td>
+      </tr>
+      <tr>
+        <td>135mm and above</td>
+        <td>Tighter framing and compressed perspective.</td>
+      </tr>
+    </table>
+
+    <p>
+      These are common full-frame photography references.
+      Actual field of view depends on sensor size and camera system.
+      AI models may interpret lens descriptions approximately.
+    </p>
+
+    <h3>Focus Terminology</h3>
+
+    <ul>
+      <li><strong>Shallow Depth of Field:</strong> Subject in focus with a blurred background.</li>
+      <li><strong>Deep Depth of Field:</strong> More of the scene appears in focus.</li>
+      <li><strong>Bokeh:</strong> Visual quality of out-of-focus highlights.</li>
+      <li><strong>Rack Focus:</strong> Focus shifts from one subject to another.</li>
+      <li><strong>Sharp Focus:</strong> Subject details appear clearly defined.</li>
+      <li><strong>Soft Focus:</strong> A deliberately softer visual appearance.</li>
+    </ul>
+
+    <h3>Camera Movement Terminology</h3>
+
+    <table>
+      <tr>
+        <th>Movement</th>
+        <th>Meaning</th>
+      </tr>
+      <tr>
+        <td>Pan</td>
+        <td>Camera rotates horizontally.</td>
+      </tr>
+      <tr>
+        <td>Tilt</td>
+        <td>Camera rotates vertically.</td>
+      </tr>
+      <tr>
+        <td>Dolly In</td>
+        <td>Camera moves closer to the subject.</td>
+      </tr>
+      <tr>
+        <td>Dolly Out</td>
+        <td>Camera moves away from the subject.</td>
+      </tr>
+      <tr>
+        <td>Tracking Shot</td>
+        <td>Camera moves along with the subject.</td>
+      </tr>
+      <tr>
+        <td>Crane Shot</td>
+        <td>Camera moves vertically or through space using a crane-like movement.</td>
+      </tr>
+      <tr>
+        <td>Orbit</td>
+        <td>Camera moves around the subject.</td>
+      </tr>
+      <tr>
+        <td>Zoom</td>
+        <td>Focal length changes to alter framing.</td>
+      </tr>
+    </table>
+
+    <div class="warning">
+      A dolly movement and a zoom are not the same.
+      A dolly physically changes the camera position;
+      a zoom changes the lens focal length.
+    </div>
+
+  </section>
+
+
+  <!-- LESSON 07 -->
+
+  <section id="lesson-7">
+
+    <div class="lesson-label">LESSON 07</div>
+    <h2>Advanced Image Prompt Engineering</h2>
+
+    <p class="english">
+      Image prompts should describe the visual result:
+      subject, details, composition, lighting, style and
+      the elements that must remain consistent.
+    </p>
+
+    <p class="telugu">
+      Image generationలో scene ఎలా కనిపించాలో ముఖ్యమైన
+      వివరాలు prompt‌లో ఉండాలి. Subject, facial appearance,
+      clothing, background, camera view మరియు lighting
+      వంటి వివరాలను అవసరానికి అనుగుణంగా ఇవ్వాలి.
+    </p>
+
+    <h3>Image Prompt Formula</h3>
+
+    <div class="prompt-box">
+      Subject + Appearance + Action/Pose + Environment
+      + Composition + Lighting + Style + Quality Details
+      + Constraints
+    </div>
+
+    <h3>Example 01 — Cinematic Portrait</h3>
+
+    <div class="prompt-box">
+      A cinematic portrait of a young Indian man standing
+      on a rooftop in an urban city, wearing a dark navy
+      jacket, natural facial proportions, thoughtful expression,
+      distant city skyline, warm sunset backlight,
+      medium close-up, 85mm portrait photography,
+      shallow depth of field, realistic skin texture,
+      professional cinematic color grading.
+    </div>
+
+    <h3>Example 02 — Product Photography</h3>
+
+    <div class="prompt-box">
+      A premium wireless headphone displayed on a clean
+      black pedestal, elegant industrial design, subtle
+      metallic reflections, dark luxury studio environment,
+      controlled softbox lighting, three-quarter product view,
+      precise product geometry, premium commercial photography.
+    </div>
+
+    <h3>Example 03 — Indian Festival Scene</h3>
+
+    <div class="prompt-box">
+      A vibrant Indian festival street at night,
+      beautifully illuminated traditional decorations,
+      colorful lights, families celebrating in the distance,
+      realistic architectural details, warm ambient lighting,
+      cinematic wide shot, rich but balanced color palette,
+      documentary photography style.
+    </div>
+
+    <h3>Example 04 — Fantasy Environment</h3>
+
+    <div class="prompt-box">
+      An ancient floating temple above a sea of clouds,
+      enormous stone pillars, waterfalls flowing into mist,
+      distant mountains, dramatic sunrise, atmospheric depth,
+      epic fantasy environment concept art, wide-angle
+      composition, intricate architectural details.
+    </div>
+
+    <h3>Example 05 — Fashion Editorial</h3>
+
+    <div class="prompt-box">
+      A high-fashion editorial portrait of a model wearing
+      a modern black outfit, standing in a minimalist
+      architectural studio, dramatic directional lighting,
+      clean composition, elegant pose, sophisticated
+      monochromatic color palette, professional fashion
+      photography.
+    </div>
+
+    <div class="warning">
+      These prompts are learning examples, not guaranteed
+      output recipes. Different image models interpret
+      descriptions differently. Check the selected model's
+      own prompt guidance.
+    </div>
+
+  </section>
+
+
+  <!-- LESSON 08 -->
+
+  <section id="lesson-8">
+
+    <div class="lesson-label">LESSON 08</div>
+    <h2>Advanced Video Prompt Engineering</h2>
+
+    <p class="english">
+      Video prompts must describe not only what is visible,
+      but also how the scene changes over time.
+    </p>
+
+    <p class="telugu">
+      Image prompt‌లో ఒక moment‌ను describe చేస్తాం.
+      Video prompt‌లో ఆ scene ఎలా ప్రారంభమవుతుంది,
+      subject ఎలా కదులుతుంది, camera ఎలా move అవుతుంది,
+      చివరికి ఏమి జరుగుతుంది అనే విషయాలు కూడా చెప్పాలి.
+    </p>
+
+    <h3>Video Prompt Formula</h3>
+
+    <div class="prompt-box">
+      Subject + Starting State + Action + Environment
+      + Camera Movement + Motion Details + Lighting
+      + Ending State + Visual Style
+    </div>
+
+    <h3>Example 01 — Character Walking</h3>
+
+    <div class="prompt-box">
+      A young traveler walks slowly along a quiet mountain
+      road at sunrise. The camera tracks backward smoothly
+      while maintaining a medium shot. Natural walking motion,
+      gentle wind moving the jacket, distant mountains covered
+      in morning mist, soft golden sunlight, cinematic realism.
+    </div>
+
+    <h3>Example 02 — Product Reveal</h3>
+
+    <div class="prompt-box">
+      A premium perfume bottle stands on a reflective
+      black surface. The camera slowly pushes in toward
+      the bottle as soft highlights travel across its glass
+      edges. Fine mist moves gently in the background.
+      Controlled luxury studio lighting, elegant commercial
+      product film.
+    </div>
+
+    <h3>Example 03 — Cinematic Landscape</h3>
+
+    <div class="prompt-box">
+      Aerial camera slowly flies forward over a vast green
+      valley surrounded by towering mountains. Clouds drift
+      naturally across the peaks. A river reflects the morning
+      light below. Smooth cinematic drone movement, atmospheric
+      depth, realistic landscape cinematography.
+    </div>
+
+    <h3>Example 04 — Character Turns</h3>
+
+    <div class="prompt-box">
+      A woman stands near a large window, initially looking
+      outside. She slowly turns her head toward the camera,
+      maintaining a natural facial expression. The camera
+      remains steady in a medium close-up. Soft daylight,
+      realistic movement, cinematic portrait style.
+    </div>
+
+    <h3>Video Prompt Best Practices</h3>
+
+    <ul>
+      <li>Describe one clear primary action.</li>
+      <li>Specify the starting state.</li>
+      <li>Describe the camera movement.</li>
+      <li>Keep movement physically plausible.</li>
+      <li>Specify important environmental motion.</li>
+      <li>Describe the ending state when relevant.</li>
+      <li>Avoid conflicting instructions.</li>
+      <li>Use short, clear action sequences for short clips.</li>
+    </ul>
+
+    <div class="warning">
+      Some video models interpret camera directions differently.
+      Some tools provide separate camera controls. When a
+      dedicated control exists, use it rather than relying
+      only on prompt text.
+    </div>
+
+  </section>
+
+
+  <!-- LESSON 09 -->
+
+  <section id="lesson-9">
+
+    <div class="lesson-label">LESSON 09</div>
+    <h2>Negative Prompts & Prompt Constraints</h2>
+
+    <p class="english">
+      A negative prompt or constraint describes unwanted
+      elements that the system should avoid, where supported.
+    </p>
+
+    <p class="telugu">
+      మనకు ఏవి కావాలో చెప్పడం మాత్రమే కాకుండా, ఏవి వద్దో
+      కూడా కొన్ని tools‌లో specify చేయవచ్చు. దీన్నే
+      Negative Prompting అంటారు.
+    </p>
+
+    <h3>Common Negative Prompt Examples</h3>
+
+    <div class="prompt-box">
+      blurry, low detail, distorted proportions,
+      duplicate objects, unwanted text, watermark,
+      unnatural anatomy
+    </div>
+
+    <h3>Where Negative Prompts Can Help</h3>
+
+    <ul>
+      <li>Reduce unwanted visual elements.</li>
+      <li>Discourage duplicate objects.</li>
+      <li>Specify unwanted composition outcomes.</li>
+      <li>Reduce certain image artifacts.</li>
+      <li>Help maintain a cleaner visual direction.</li>
+    </ul>
+
+    <h3>Important Limitations</h3>
+
+    <p>
+      Not every model provides a separate negative prompt field.
+      Some models ignore or interpret negative instructions
+      differently.
+    </p>
+
+    <p>
+      A negative prompt cannot guarantee that all errors
+      will disappear.
+    </p>
+
+    <h3>Constraints in Video</h3>
+
+    <p>
+      In video generation, constraints may describe how the
+      subject, background or camera should behave.
+    </p>
+
+    <div class="prompt-box">
+      The camera remains fixed. The subject stays in the
+      center of the frame. No scene cuts. Keep the background
+      architecture consistent. Natural movement only.
+    </div>
+
+    <div class="warning">
+      Do not add a long list of negative terms without a reason.
+      Focus on the specific failure you are trying to prevent.
+    </div>
+
+  </section>
+
+
+  <!-- LESSON 10 -->
+
+  <section id="lesson-10">
+
+    <div class="lesson-label">LESSON 10</div>
+    <h2>Prompt Iteration, Debugging & Consistency</h2>
+
+    <p class="english">
+      Prompt iteration is the process of testing a prompt,
+      reviewing the result and making controlled improvements.
+    </p>
+
+    <p class="telugu">
+      మొదటి prompt‌లోనే perfect result రావాల్సిన అవసరం లేదు.
+      వచ్చిన output‌ను పరిశీలించి, ఏ అంశం తప్పుగా ఉందో
+      గుర్తించి, ఆ భాగాన్ని మాత్రమే improve చేయాలి.
+    </p>
+
+    <h3>Five-Step Improvement Process</h3>
+
+    <ol>
+      <li><strong>Generate:</strong> Create an initial result.</li>
+      <li><strong>Review:</strong> Identify the main problem.</li>
+      <li><strong>Diagnose:</strong> Find which instruction was unclear.</li>
+      <li><strong>Refine:</strong> Change only the relevant prompt section.</li>
+      <li><strong>Compare:</strong> Review the new result against the previous one.</li>
+    </ol>
+
+    <h3>Example: Prompt Debugging</h3>
+
+    <div class="lesson-card">
+      <h3>Initial Prompt</h3>
+      <div class="prompt-box">
+        A man in a city, cinematic.
+      </div>
+
+      <h3>Problem</h3>
+      <p>
+        The output shows an unclear location, an unexpected
+        camera angle and an inconsistent visual style.
+      </p>
+
+      <h3>Improved Prompt</h3>
+      <div class="prompt-box">
+        A young man standing on a rooftop in a modern Indian
+        city at sunset, medium-wide eye-level shot, subject
+        positioned on the left third of the frame, warm
+        backlighting, realistic urban architecture,
+        cinematic photography, natural proportions.
+      </div>
+
+      <p>
+        Improved prompt‌లో subject, location, framing,
+        lighting మరియు style స్పష్టంగా ఉన్నాయి.
+      </p>
+    </div>
+
+    <h3>Character Consistency</h3>
+
+    <p>
+      ఒకే character‌ను multiple scenes‌లో చూపించాలంటే
+      appearance details‌ను consistent‌గా maintain చేయాలి.
+    </p>
+
+    <p>Describe relevant details such as:</p>
+
+    <ul>
+      <li>Approximate age appearance.</li>
+      <li>Hair style and color.</li>
+      <li>Clothing and accessories.</li>
+      <li>Distinctive visual features.</li>
+      <li>Body proportions and general appearance.</li>
+    </ul>
+
+    <p>
+      Where supported, use reference images or dedicated
+      character identity features. Text alone cannot guarantee
+      exact identity consistency across every model.
+    </p>
+
+    <h3>Reference Image Prompting</h3>
+
+    <p>
+      A reference image can guide appearance, composition,
+      color, environment or other supported visual attributes.
+    </p>
+
+    <p>
+      Always check what the selected model actually uses
+      the reference for. Some tools preserve subject identity;
+      others mainly use style, composition or visual guidance.
+    </p>
+
+    <h3>Common Prompt Mistakes</h3>
+
+    <table>
+      <tr>
+        <th>Mistake</th>
+        <th>Improvement</th>
+      </tr>
+      <tr>
+        <td>Too vague</td>
+        <td>Add relevant subject and scene details.</td>
+      </tr>
+      <tr>
+        <td>Conflicting instructions</td>
+        <td>Choose one clear visual direction.</td>
+      </tr>
+      <tr>
+        <td>Too many actions</td>
+        <td>Describe one primary action.</td>
+      </tr>
+      <tr>
+        <td>Unclear camera direction</td>
+        <td>Specify shot type and movement.</td>
+      </tr>
+      <tr>
+        <td>Unnecessary keywords</td>
+        <td>Remove irrelevant descriptions.</td>
+      </tr>
+      <tr>
+        <td>Ignoring model capabilities</td>
+        <td>Check model-specific guidance.</td>
+      </tr>
+      <tr>
+        <td>Changing everything at once</td>
+        <td>Improve one prompt section at a time.</td>
+      </tr>
+    </table>
+
+  </section>
+
+
+  <!-- PRACTICAL PROJECT -->
+
+  <section id="assignment">
+
+    <div class="lesson-label">PRACTICAL PROJECT</div>
+    <h2>Create Your First Professional Prompt Pack</h2>
+
+    <div class="lesson-card">
+
+      <h3>Project 01 — Cinematic Character</h3>
+
+      <div class="prompt-box">
+        A young Indian explorer standing at the entrance
+        of an ancient stone temple in a dense tropical forest,
+        wearing practical adventure clothing, medium-wide
+        cinematic shot, eye-level camera, soft rays of sunlight
+        passing through the trees, atmospheric mist, realistic
+        textures, detailed environment, cinematic color grading.
+      </div>
+
+      <h3>Project 02 — Luxury Advertisement</h3>
+
+      <div class="prompt-box">
+        A premium smartphone displayed on a floating
+        minimalist platform inside a dark luxury studio,
+        elegant reflective surfaces, controlled rim lighting,
+        close-up product shot, slow camera push-in,
+        refined commercial visual style, clean product geometry.
+      </div>
+
+      <h3>Project 03 — Fantasy Video</h3>
+
+      <div class="prompt-box">
+        A majestic ancient city built on a mountain cliff.
+        The camera slowly moves forward toward the main gate.
+        Clouds drift naturally around the mountains while
+        distant waterfalls flow down the cliffs. Wide cinematic
+        composition, epic fantasy atmosphere, natural motion.
+      </div>
+
+      <h3>Project Tasks</h3>
+
+      <ol>
+        <li>Choose one of the three projects.</li>
+        <li>Identify the subject and environment.</li>
+        <li>Choose a suitable camera angle.</li>
+        <li>Choose lighting and color style.</li>
+        <li>Write your own complete prompt.</li>
+        <li>Generate a result using an appropriate available model.</li>
+        <li>Identify one problem in the output.</li>
+        <li>Improve the prompt and compare results.</li>
+      </ol>
+
+    </div>
+
+  </section>
+
+
+  <!-- QUIZ -->
+
+  <section id="quiz">
+
+    <div class="lesson-label">KNOWLEDGE CHECK</div>
+    <h2>Module 04 — Final Quiz</h2>
+
+    <details>
+      <summary>1. What is Prompt Engineering?</summary>
+      <p>
+        Designing and refining instructions to guide an
+        AI system toward a desired output.
+      </p>
+    </details>
+
+    <details>
+      <summary>2. What are the main parts of a structured prompt?</summary>
+      <p>
+        Subject, action, environment, appearance, composition,
+        camera, lighting, style, motion and constraints.
+      </p>
+    </details>
+
+    <details>
+      <summary>3. What is a Subject?</summary>
+      <p>The main person, object or scene in a prompt.</p>
+    </details>
+
+    <details>
+      <summary>4. What is a Close-Up shot?</summary>
+      <p>
+        A tight framing that emphasizes a face or important object.
+      </p>
+    </details>
+
+    <details>
+      <summary>5. What is Backlighting?</summary>
+      <p>Lighting that comes from behind the subject.</p>
+    </details>
+
+    <details>
+      <summary>6. What is Depth of Field?</summary>
+      <p>
+        The range of distances that appear acceptably sharp
+        in an image.
+      </p>
+    </details>
+
+    <details>
+      <summary>7. What is the difference between Pan and Tilt?</summary>
+      <p>
+        Pan is horizontal camera rotation; tilt is vertical
+        camera rotation.
+      </p>
+    </details>
+
+    <details>
+      <summary>8. What is a Negative Prompt?</summary>
+      <p>
+        An instruction describing unwanted elements,
+        where the selected model supports it.
+      </p>
+    </details>
+
+    <details>
+      <summary>9. What is Prompt Iteration?</summary>
+      <p>
+        Testing, reviewing and refining prompts in a
+        controlled process.
+      </p>
+    </details>
+
+    <details>
+      <summary>10. Does a long prompt always produce a better result?</summary>
+      <p>
+        No. Clear, relevant and consistent instructions
+        are more important than unnecessary length.
+      </p>
+    </details>
+
+    <details>
+      <summary>11. What is a Reference Image?</summary>
+      <p>
+        An image supplied to guide supported visual attributes
+        in a generation workflow.
+      </p>
+    </details>
+
+    <details>
+      <summary>12. Why should you check model-specific prompt guidance?</summary>
+      <p>
+        Different models interpret prompts and supported
+        controls differently.
+      </p>
+    </details>
+
+  </section>
+
+
+  <!-- COMPLETION -->
+
+  <section id="completion">
+
+    <div class="lesson-label">MODULE REVIEW</div>
+    <h2>Module 04 Completion Checklist</h2>
+
+    <div class="lesson-card">
+      <ul>
+        <li>Understand Prompt Engineering.</li>
+        <li>Learn the structured prompt framework.</li>
+        <li>Understand subject, action and environment.</li>
+        <li>Learn camera shots and angles.</li>
+        <li>Understand lighting and color terminology.</li>
+        <li>Learn lens and focus terminology.</li>
+        <li>Write advanced image prompts.</li>
+        <li>Write video prompts with motion descriptions.</li>
+        <li>Understand negative prompts.</li>
+        <li>Practice prompt debugging and iteration.</li>
+        <li>Complete the professional prompt pack.</li>
+        <li>Review all quiz answers.</li>
+      </ul>
+
+      <p>
+        Interactive prompt builder, prompt library,
+        copy buttons, model-specific prompt templates
+        and video tutorials will be connected in later
+        development stages.
+      </p>
+    </div>
+
+  </section>
+
+
+  <!-- REFERENCES -->
+
+  <section id="references">
+
+    <div class="lesson-label">FURTHER LEARNING</div>
+    <h2>Prompt Engineering Resources</h2>
+
+    <ul>
+      <li>
+        <a href="https://higgsfield.ai/"
+           target="_blank" rel="noopener noreferrer">
+          Higgsfield Official Platform
+        </a>
+      </li>
+      <li>
+        <a href="https://platform.openai.com/docs/guides/prompt-engineering"
+           target="_blank" rel="noopener noreferrer">
+          OpenAI Prompt Engineering Guide
+        </a>
+      </li>
+    </ul>
+
+    <p>
+      Model-specific prompt instructions should always be
+      checked for the exact model and generation mode you use.
+    </p>
+
+  </section>
+
+
+  <footer class="lesson-footer">
+    <a href="../index.html">← Back to AI Creator School</a>
+
+    <p>AI Creator School · Learn. Create. Master.</p>
+    <p>Independent Telugu + English AI Education Platform.</p>
+  </footer>
+
+</main>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
