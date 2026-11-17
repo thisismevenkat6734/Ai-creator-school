@@ -1,0 +1,774 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Learn advanced AI image editing, inpainting, object replacement, background removal, outpainting and professional image enhancement in Telugu and English.">
+  <title>Module 06 - Advanced Image Editing | AI Creator School</title>
+  <link rel="stylesheet" href="../style.css">
+  <style>
+    .module-hero {
+      padding: 42px 24px;
+      border-radius: 18px;
+      background: linear-gradient(135deg, #171c38, #30204b, #172c40);
+      margin: 24px 0;
+    }
+    .module-hero h1 { font-size: clamp(2rem, 5vw, 3rem); }
+    .module-hero p { max-width: 850px; line-height: 1.8; }
+    .lesson-card {
+      background: rgba(255,255,255,.035);
+      border: 1px solid rgba(255,255,255,.1);
+      border-radius: 14px;
+      padding: 22px;
+      margin: 18px 0;
+    }
+    .lesson-card h2 { margin-top: 0; }
+    .lesson-card h3 { margin-top: 24px; }
+    .lesson-card p, .lesson-card li { line-height: 1.8; }
+    .lesson-card li { margin-bottom: 8px; }
+    .lesson-card code {
+      overflow-wrap: anywhere;
+      white-space: normal;
+    }
+    .telugu {
+      border-left: 3px solid #9b7cff;
+      padding: 10px 15px;
+      margin: 14px 0;
+      background: rgba(155,124,255,.07);
+      border-radius: 5px;
+    }
+    .tip {
+      border-left: 3px solid #36c99a;
+      padding: 12px 15px;
+      margin: 15px 0;
+      background: rgba(54,201,154,.07);
+      border-radius: 5px;
+    }
+    .warning {
+      border-left: 3px solid #e5a33d;
+      padding: 12px 15px;
+      margin: 15px 0;
+      background: rgba(229,163,61,.07);
+      border-radius: 5px;
+    }
+    .prompt-box {
+      padding: 16px;
+      background: rgba(0,0,0,.25);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 10px;
+      overflow-wrap: anywhere;
+      line-height: 1.8;
+    }
+    .lesson-number {
+      color: #a995ff;
+      font-size: .85rem;
+      font-weight: 700;
+      letter-spacing: 1px;
+    }
+    .module-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin: 25px 0;
+    }
+    .module-nav a {
+      display: inline-block;
+      padding: 11px 17px;
+      border-radius: 9px;
+      border: 1px solid rgba(255,255,255,.15);
+      text-decoration: none;
+    }
+    .checklist li { list-style: none; }
+    .checklist li::before { content: "✓ "; color: #36c99a; font-weight: bold; }
+    table { width: 100%; border-collapse: collapse; margin: 15px 0; }
+    th, td {
+      padding: 11px;
+      border: 1px solid rgba(255,255,255,.13);
+      text-align: left;
+      vertical-align: top;
+      line-height: 1.6;
+    }
+    .quiz-answer { margin: 10px 0; }
+    @media(max-width:600px) {
+      .module-hero { padding: 28px 18px; }
+      .lesson-card { padding: 17px; }
+      table { display: block; overflow-x: auto; }
+    }
+  </style>
+</head>
+<body>
+  <main class="container">
+    <div class="module-nav">
+      <a href="../index.html">← Back to Course Home</a>
+      <a href="module-05.html">← Previous Module</a>
+    </div>
+
+    <section class="module-hero">
+      <p class="lesson-number">AI CREATOR SCHOOL • MODULE 06</p>
+      <h1>Advanced AI Image Editing</h1>
+      <p>
+        Master inpainting, masking, object removal, background replacement,
+        outpainting, image transformation, restoration and professional
+        image quality control.
+      </p>
+      <p><strong>Level:</strong> Intermediate to Advanced | <strong>Language:</strong> English + తెలుగు</p>
+      <p><strong>Goal:</strong> Learn how to turn an ordinary image into a polished, professional visual using AI-assisted editing workflows.</p>
+    </section>
+
+    <section class="lesson-card">
+      <h2>What You Will Learn</h2>
+      <ul>
+        <li>Understand AI image editing workflows.</li>
+        <li>Prepare source images correctly.</li>
+        <li>Master masks, selections and brush controls.</li>
+        <li>Use inpainting for targeted edits.</li>
+        <li>Remove unwanted objects and replace them.</li>
+        <li>Remove and replace backgrounds.</li>
+        <li>Expand images using outpainting.</li>
+        <li>Transform images with image-to-image workflows.</li>
+        <li>Maintain subject and character consistency.</li>
+        <li>Match lighting, shadows and colors.</li>
+        <li>Improve image quality and repair common AI artifacts.</li>
+        <li>Export professional deliverables.</li>
+      </ul>
+      <div class="telugu">
+        <strong>తెలుగులో:</strong> ఈ module పూర్తయ్యే సమయానికి ఒక imageలో అవసరం లేని వస్తువులను తొలగించడం,
+        కొత్త వస్తువులు చేర్చడం, background మార్చడం, image size పెంచడం,
+        quality మెరుగుపరచడం వంటి పనులను step-by-step చేయగలుగుతావు.
+      </div>
+    </section>
+
+    <section class="lesson-card">
+      <span class="lesson-number">LESSON 01</span>
+      <h2>Understanding Advanced AI Image Editing</h2>
+
+      <h3>1.1 What is AI Image Editing?</h3>
+      <p>
+        AI image editing uses artificial intelligence to modify selected parts
+        of an existing image or transform the entire image based on instructions.
+        Unlike ordinary text-to-image generation, editing starts with an existing
+        visual reference.
+      </p>
+      <div class="telugu">
+        <strong>తెలుగు:</strong> కొత్త image generate చేయడం ఒక విధానం.
+        ఇప్పటికే ఉన్న imageలో కొన్ని మార్పులు చేయడం మరో విధానం.
+        రెండో విధానాన్నే AI image editing అంటాం.
+      </div>
+
+      <h3>1.2 Important Editing Methods</h3>
+      <table>
+        <tr><th>Method</th><th>Purpose</th></tr>
+        <tr><td>Inpainting</td><td>Edit or regenerate a selected region.</td></tr>
+        <tr><td>Outpainting</td><td>Extend an image beyond its original boundaries.</td></tr>
+        <tr><td>Background Replacement</td><td>Replace the background while preserving the subject.</td></tr>
+        <tr><td>Object Removal</td><td>Remove unwanted objects and reconstruct the area.</td></tr>
+        <tr><td>Object Replacement</td><td>Replace an existing object with another object.</td></tr>
+        <tr><td>Image-to-Image</td><td>Transform an existing image using a prompt or reference.</td></tr>
+        <tr><td>Restoration</td><td>Improve damaged, noisy or low-quality images.</td></tr>
+        <tr><td>Upscaling</td><td>Increase image dimensions and perceived detail.</td></tr>
+      </table>
+
+      <h3>1.3 Editing vs Generation</h3>
+      <p><strong>Generation:</strong> Create a new image from a prompt.</p>
+      <p><strong>Editing:</strong> Change an existing image while trying to preserve the parts that should remain unchanged.</p>
+      <div class="tip">
+        Professional rule: Before editing, decide what must change and what must remain exactly the same.
+      </div>
+    </section>
+
+    <section class="lesson-card">
+      <span class="lesson-number">LESSON 02</span>
+      <h2>Preparing Your Source Image</h2>
+
+      <h3>2.1 Choose the Right Image</h3>
+      <ul>
+        <li>Use the highest-quality original image available.</li>
+        <li>Check whether the subject is clearly visible.</li>
+        <li>Avoid unnecessary compression.</li>
+        <li>Check focus, lighting and exposure.</li>
+        <li>Use a suitable image dimension for the final output.</li>
+      </ul>
+
+      <h3>2.2 Common Image Formats</h3>
+      <table>
+        <tr><th>Format</th><th>Typical Use</th></tr>
+        <tr><td>JPEG / JPG</td><td>Photographs and general-purpose images.</td></tr>
+        <tr><td>PNG</td><td>Graphics, transparency and lossless image storage.</td></tr>
+        <tr><td>WebP</td><td>Web-friendly compressed images.</td></tr>
+        <tr><td>TIFF</td><td>High-quality professional image workflows where supported.</td></tr>
+      </table>
+
+      <h3>2.3 Before Editing Checklist</h3>
+      <ul class="checklist">
+        <li>Keep an untouched original copy.</li>
+        <li>Identify the exact area to edit.</li>
+        <li>Write down the desired final appearance.</li>
+        <li>Decide the final aspect ratio.</li>
+        <li>Check image rights and subject consent.</li>
+      </ul>
+      <div class="telugu">
+        <strong>తెలుగు:</strong> Original imageని ఎప్పుడూ overwrite చేయవద్దు.
+        ఒక copy తీసుకుని దానిపై editing చేయడం మంచిది.
+      </div>
+    </section>
+
+    <section class="lesson-card">
+      <span class="lesson-number">LESSON 03</span>
+      <h2>Masking, Selection and Brush Control</h2>
+
+      <h3>3.1 What is a Mask?</h3>
+      <p>
+        A mask tells an editing system which region should be modified and,
+        depending on the tool, which region should be protected.
+        Many interfaces use a colored overlay to show the selected area.
+      </p>
+      <div class="telugu">
+        <strong>తెలుగు:</strong> Mask అనేది imageలో ఏ భాగాన్ని మార్చాలో AIకి చూపించే selection.
+        Mask వేసిన area ఆధారంగా edit జరిగే విధానం toolను బట్టి మారవచ్చు.
+      </div>
+
+      <h3>3.2 Brush Size</h3>
+      <ul>
+        <li><strong>Small brush:</strong> Small details, jewelry, text and thin edges.</li>
+        <li><strong>Medium brush:</strong> Objects and medium-sized regions.</li>
+        <li><strong>Large brush:</strong> Large objects and background regions.</li>
+      </ul>
+
+      <h3>3.3 Feathering and Edge Control</h3>
+      <p>
+        Feathering softens the boundary of a selection. It can help the edited
+        region blend with surrounding pixels. Too much feathering may blur edges;
+        too little may create visible seams.
+      </p>
+
+      <h3>3.4 Masking Workflow</h3>
+      <ol>
+        <li>Open the source image in a compatible editing tool.</li>
+        <li>Select the mask, brush or region-selection feature if available.</li>
+        <li>Paint over the intended edit area.</li>
+        <li>Inspect the boundary at high zoom.</li>
+        <li>Adjust the selection to avoid unwanted areas.</li>
+        <li>Enter a precise editing instruction.</li>
+        <li>Generate and inspect the result.</li>
+      </ol>
+
+      <div class="warning">
+        Masking controls, feathering, inversion and selection behavior vary by
+        model and platform tool. Do not assume every Higgsfield interface exposes
+        the same controls.
+      </div>
+    </section>
+
+    <section class="lesson-card">
+      <span class="lesson-number">LESSON 04</span>
+      <h2>Inpainting: Edit Only the Selected Area</h2>
+
+      <h3>4.1 What is Inpainting?</h3>
+      <p>
+        Inpainting reconstructs or generates content inside a selected region
+        while attempting to make it fit the surrounding image.
+      </p>
+      <div class="telugu">
+        <strong>తెలుగు:</strong> ఒక వ్యక్తి చేతిలో ఉన్న objectని మార్చాలి అనుకో.
+        మొత్తం imageని మళ్లీ generate చేయకుండా ఆ object ఉన్న భాగాన్ని మాత్రమే select
+        చేసి కొత్త object generate చేయడాన్ని inpainting అంటాం.
+      </div>
+
+      <h3>4.2 Professional Inpainting Workflow</h3>
+      <ol>
+        <li>Upload the source image.</li>
+        <li>Open an editing mode that supports masked editing.</li>
+        <li>Select the unwanted or editable region.</li>
+        <li>Include a little surrounding context where appropriate.</li>
+        <li>Describe the replacement clearly.</li>
+        <li>Generate multiple variations if available.</li>
+        <li>Compare edges, shadows, perspective and texture.</li>
+        <li>Refine the mask or prompt if necessary.</li>
+      </ol>
+
+      <h3>4.3 Example Prompt</h3>
+      <div class="prompt-box">
+        Replace the selected object with a realistic ceramic coffee cup.
+        Match the original camera perspective, scene lighting, object scale
+        and natural contact shadow. Preserve all unselected areas of the image.
+      </div>
+
+      <h3>4.4 Common Mistakes</h3>
+      <ul>
+        <li>Masking too much of the original image.</li>
+        <li>Masking too little of the object boundary.</li>
+        <li>Not describing the object's size or position.</li>
+        <li>Ignoring the existing lighting direction.</li>
+        <li>Accepting the first result without checking details.</li>
+      </ul>
+    </section>
+
+    <section class="lesson-card">
+      <span class="lesson-number">LESSON 05</span>
+      <h2>Object Removal and Object Replacement</h2>
+
+      <h3>5.1 Removing Unwanted Objects</h3>
+      <p>
+        Object removal attempts to eliminate a selected object and reconstruct
+        the background that would naturally appear behind it.
+      </p>
+      <p><strong>Examples:</strong> Remove a distracting person from a travel photo, a cable from a product image, or a small unwanted object from a room photograph.</p>
+
+      <h3>5.2 Removal Workflow</h3>
+      <ol>
+        <li>Choose the object to remove.</li>
+        <li>Mask the full object, including shadows if they should disappear.</li>
+        <li>Inspect nearby edges and overlapping objects.</li>
+        <li>Use a removal or inpainting tool where supported.</li>
+        <li>Review the reconstructed background.</li>
+        <li>Repeat with a refined mask if the result is imperfect.</li>
+      </ol>
+
+      <h3>5.3 Object Replacement</h3>
+      <p>
+        Replacing an object requires more than naming the new object. The prompt
+        should describe its position, size, orientation, material and lighting.
+      </p>
+
+      <div class="prompt-box">
+        Replace the selected backpack with a premium black leather backpack.
+        Keep the same position, approximate dimensions and camera perspective.
+        Match the scene lighting and create a realistic contact shadow.
+        Preserve the person's clothing and the rest of the background.
+      </div>
+
+      <h3>5.4 Quality Inspection</h3>
+      <ul>
+        <li>Does the new object have the correct scale?</li>
+        <li>Are its edges natural?</li>
+        <li>Does it match the perspective?</li>
+        <li>Are shadows and reflections believable?</li>
+        <li>Did the edit accidentally change nearby objects?</li>
+      </ul>
+    </section>
+
+    <section class="lesson-card">
+      <span class="lesson-number">LESSON 06</span>
+      <h2>Background Removal and Replacement</h2>
+
+      <h3>6.1 Background Removal</h3>
+      <p>
+        Background removal separates a foreground subject from its environment.
+        The subject may then be placed on a transparent or different background,
+        depending on the tool and export format.
+      </p>
+
+      <h3>6.2 Difficult Areas</h3>
+      <ul>
+        <li>Hair strands and flyaway hair.</li>
+        <li>Transparent glass and reflective objects.</li>
+        <li>Fine fabric and lace.</li>
+        <li>Complex edges and overlapping objects.</li>
+        <li>Motion blur around moving subjects.</li>
+      </ul>
+
+      <h3>6.3 Background Replacement Workflow</h3>
+      <ol>
+        <li>Separate the subject from the original background.</li>
+        <li>Choose a new background that matches the intended scene.</li>
+        <li>Set the subject's position and scale.</li>
+        <li>Match light direction and color temperature.</li>
+        <li>Add realistic contact shadows where needed.</li>
+        <li>Inspect hair, clothing and object edges.</li>
+      </ol>
+
+      <h3>6.4 Example Prompt</h3>
+      <div class="prompt-box">
+        Replace the background with a premium modern studio interior.
+        Keep the original person unchanged. Match the subject's perspective,
+        lighting direction and color temperature with the new environment.
+        Add subtle realistic contact shadows.
+      </div>
+
+      <div class="telugu">
+        <strong>తెలుగు:</strong> Background మార్చినప్పుడు subject మాత్రమే కాదు,
+        కొత్త backgroundలో subject సహజంగా కనిపించాలి. Light, shadow, perspective
+        సరిపోకపోతే image fakeగా కనిపిస్తుంది.
+      </div>
+    </section>
+
+    <section class="lesson-card">
+      <span class="lesson-number">LESSON 07</span>
+      <h2>Outpainting and Canvas Expansion</h2>
+
+      <h3>7.1 What is Outpainting?</h3>
+      <p>
+        Outpainting extends an image beyond its original boundaries by generating
+        additional visual content around the existing composition.
+      </p>
+      <p><strong>Example:</strong> Convert a portrait image into a wider landscape composition by generating additional background around the person.</p>
+
+      <h3>7.2 When to Use It</h3>
+      <ul>
+        <li>Convert portrait images into landscape layouts.</li>
+        <li>Create additional space for advertising text.</li>
+        <li>Extend a cinematic environment.</li>
+        <li>Prepare images for banners and thumbnails.</li>
+        <li>Reframe an image for a different social platform.</li>
+      </ul>
+
+      <h3>7.3 Outpainting Workflow</h3>
+      <ol>
+        <li>Open the original image in a compatible canvas or expansion tool.</li>
+        <li>Choose the required output dimensions.</li>
+        <li>Expand the canvas in the desired direction.</li>
+        <li>Describe what should continue outside the original frame.</li>
+        <li>Generate the extended area.</li>
+        <li>Check continuity of background, architecture and lighting.</li>
+      </ol>
+
+      <h3>7.4 Example Prompt</h3>
+      <div class="prompt-box">
+        Extend the image horizontally into a cinematic wide composition.
+        Preserve the original subject and existing details. Continue the
+        surrounding environment naturally, maintaining the same perspective,
+        lighting, color palette and visual style.
+      </div>
+
+      <div class="warning">
+        Outpainting may alter parts of the original image in some workflows.
+        Always compare the result with the source before approving it.
+      </div>
+    </section>
+
+    <section class="lesson-card">
+      <span class="lesson-number">LESSON 08</span>
+      <h2>Image-to-Image Transformation</h2>
+
+      <h3>8.1 What is Image-to-Image?</h3>
+      <p>
+        Image-to-image generation uses an existing image as a visual starting
+        point and transforms it according to a prompt, reference or model-specific
+        controls.
+      </p>
+
+      <h3>8.2 Common Transformation Styles</h3>
+      <ul>
+        <li>Photograph to cinematic concept art.</li>
+        <li>Sketch to realistic image.</li>
+        <li>Day scene to night scene.</li>
+        <li>Ordinary room to luxury interior.</li>
+        <li>Product photo to premium advertising visual.</li>
+        <li>Fashion photograph to editorial style.</li>
+      </ul>
+
+      <h3>8.3 Transformation Strength</h3>
+      <p>
+        Some image-to-image models provide controls that influence how strongly
+        the source image is preserved or changed. Names and behavior differ
+        between models; examples include strength, influence or denoise controls.
+      </p>
+
+      <table>
+        <tr><th>Desired Result</th><th>General Approach</th></tr>
+        <tr><td>Preserve composition</td><td>Use a more conservative transformation where supported.</td></tr>
+        <tr><td>Change visual style</td><td>Use a clear style description and suitable reference.</td></tr>
+        <tr><td>Major scene redesign</td><td>Allow stronger transformation while checking subject identity.</td></tr>
+      </table>
+
+      <h3>8.4 Example Prompt</h3>
+      <div class="prompt-box">
+        Transform this ordinary living room into a sophisticated modern luxury
+        interior. Preserve the room's basic architecture and camera perspective.
+        Use warm indirect lighting, premium natural materials, elegant furniture
+        and realistic architectural photography.
+      </div>
+    </section>
+
+    <section class="lesson-card">
+      <span class="lesson-number">LESSON 09</span>
+      <h2>Character, Face and Product Consistency</h2>
+
+      <h3>9.1 Why Consistency Matters</h3>
+      <p>
+        A professional project may need the same person, character, product
+        or design to appear in multiple images. Uncontrolled editing can change
+        facial features, clothing, proportions or product details.
+      </p>
+
+      <h3>9.2 Character Consistency Checklist</h3>
+      <ul>
+        <li>Use an appropriate reference image where supported.</li>
+        <li>Describe stable facial and visual features.</li>
+        <li>Keep hairstyle, clothing and accessories consistent.</li>
+        <li>Keep age presentation and body proportions consistent.</li>
+        <li>Compare every generated result with the approved reference.</li>
+      </ul>
+
+      <h3>9.3 Product Consistency Checklist</h3>
+      <ul>
+        <li>Preserve the actual product shape.</li>
+        <li>Preserve brand markings and readable labels where possible.</li>
+        <li>Check colors and material details.</li>
+        <li>Check button, port and component positions.</li>
+        <li>Do not treat generated text or logos as accurate without verification.</li>
+      </ul>
+
+      <div class="warning">
+        AI can unintentionally alter identity or product details. For real people,
+        use images with permission and never create misleading or non-consensual
+        identity edits. For commercial product work, verify every factual detail.
+      </div>
+
+      <h3>9.4 Example Prompt</h3>
+      <div class="prompt-box">
+        Preserve the same person shown in the reference image. Maintain their
+        recognizable facial features, hairstyle and clothing. Change only the
+        environment and camera framing. Avoid changing the person's identity
+        or adding unrelated accessories.
+      </div>
+    </section>
+
+    <section class="lesson-card">
+      <span class="lesson-number">LESSON 10</span>
+      <h2>Lighting, Shadows and Color Matching</h2>
+
+      <h3>10.1 Why Matching Matters</h3>
+      <p>
+        When a new object or background is inserted into an image, it must
+        visually belong to the same scene. Lighting and color mismatches are
+        common reasons an edit looks artificial.
+      </p>
+
+      <h3>10.2 Lighting Elements</h3>
+      <ul>
+        <li><strong>Light direction:</strong> Where the light appears to come from.</li>
+        <li><strong>Light softness:</strong> Hard or diffused light.</li>
+        <li><strong>Color temperature:</strong> Warm or cool lighting.</li>
+        <li><strong>Intensity:</strong> How bright the light is.</li>
+        <li><strong>Ambient light:</strong> Light reflected throughout the scene.</li>
+      </ul>
+
+      <h3>10.3 Shadow Types</h3>
+      <ul>
+        <li>Contact shadows: where an object touches a surface.</li>
+        <li>Cast shadows: shadows projected onto nearby surfaces.</li>
+        <li>Soft shadows: diffuse edges.</li>
+        <li>Hard shadows: clearly defined edges.</li>
+      </ul>
+
+      <h3>10.4 Color Matching Workflow</h3>
+      <ol>
+        <li>Observe the dominant color palette.</li>
+        <li>Identify warm and cool areas.</li>
+        <li>Compare the brightness of the inserted subject.</li>
+        <li>Check contrast and saturation.</li>
+        <li>Inspect shadows and reflections.</li>
+        <li>Make final adjustments using supported editing controls.</li>
+      </ol>
+
+      <div class="telugu">
+        <strong>తెలుగు:</strong> ఒక sunny outdoor photoలో చీకటి studio lighting ఉన్న
+        objectని paste చేస్తే అది సహజంగా కనిపించదు. కొత్త object lighting కూడా
+        original sceneకి match కావాలి.
+      </div>
+    </section>
+
+    <section class="lesson-card">
+      <span class="lesson-number">LESSON 11</span>
+      <h2>Upscaling, Sharpening and Image Restoration</h2>
+
+      <h3>11.1 Upscaling</h3>
+      <p>
+        Upscaling increases image dimensions. AI-based upscalers may also
+        reconstruct or synthesize details. More pixels do not automatically
+        mean the image is more accurate.
+      </p>
+
+      <h3>11.2 Sharpening</h3>
+      <p>
+        Sharpening increases the apparent definition of edges and fine details.
+        Excessive sharpening can create halos, noise and unnatural textures.
+      </p>
+
+      <h3>11.3 Denoising</h3>
+      <p>
+        Denoising reduces unwanted visual noise. Strong denoising may remove
+        important texture such as hair, skin detail or fabric patterns.
+      </p>
+
+      <h3>11.4 Restoration Workflow</h3>
+      <ol>
+        <li>Keep the original damaged or low-resolution image.</li>
+        <li>Identify the main issue: blur, noise, scratches or compression.</li>
+        <li>Choose a compatible restoration or enhancement tool.</li>
+        <li>Apply conservative enhancement first.</li>
+        <li>Compare the result with the original.</li>
+        <li>Inspect faces, text, edges and fine textures.</li>
+        <li>Export a final copy at the required dimensions.</li>
+      </ol>
+
+      <div class="warning">
+        AI restoration can invent missing details. Do not use an AI-restored image
+        as proof of details that were not visible in the original photograph.
+      </div>
+    </section>
+
+    <section class="lesson-card">
+      <span class="lesson-number">LESSON 12</span>
+      <h2>Professional Export and Quality Control</h2>
+
+      <h3>12.1 Final Quality Inspection</h3>
+      <ul class="checklist">
+        <li>Check the complete composition.</li>
+        <li>Zoom in to inspect edges and textures.</li>
+        <li>Check faces and hands for unwanted changes.</li>
+        <li>Check text, logos and product details.</li>
+        <li>Check shadows and perspective.</li>
+        <li>Check background continuity.</li>
+        <li>Compare with the original image.</li>
+        <li>Confirm the final dimensions and format.</li>
+      </ul>
+
+      <h3>12.2 Export Decisions</h3>
+      <table>
+        <tr><th>Requirement</th><th>Consideration</th></tr>
+        <tr><td>Website image</td><td>Optimize dimensions and file size for loading speed.</td></tr>
+        <tr><td>Transparent graphic</td><td>Use a format that supports transparency, such as PNG or WebP where suitable.</td></tr>
+        <tr><td>Photography delivery</td><td>Use a high-quality format requested by the client.</td></tr>
+        <tr><td>Social media</td><td>Check platform aspect ratio and compression.</td></tr>
+        <tr><td>Print</td><td>Confirm physical dimensions, resolution and color requirements with the printer.</td></tr>
+      </table>
+
+      <h3>12.3 File Naming</h3>
+      <div class="prompt-box">
+        project-name_original.jpg<br>
+        project-name_edit-v01.png<br>
+        project-name_edit-v02.png<br>
+        project-name_final.png
+      </div>
+
+      <p>
+        Keep original files, intermediate versions and final exports separate.
+        This makes revisions easier and protects your source material.
+      </p>
+    </section>
+
+    <section class="lesson-card">
+      <span class="lesson-number">PRACTICAL TRAINING</span>
+      <h2>Five Professional Editing Projects</h2>
+
+      <h3>Project 1: Remove an Unwanted Object</h3>
+      <p><strong>Task:</strong> Select a photograph and remove one unwanted object.</p>
+      <p><strong>Success criteria:</strong> The reconstructed background should look natural, with no obvious smudges or repeated patterns.</p>
+
+      <h3>Project 2: Replace a Background</h3>
+      <p><strong>Task:</strong> Take a portrait and place the subject in a professional studio environment.</p>
+      <p><strong>Success criteria:</strong> Hair edges, shadows, light direction and subject proportions should look believable.</p>
+
+      <h3>Project 3: Create a Product Advertisement</h3>
+      <p><strong>Task:</strong> Place a product in a premium advertising environment.</p>
+      <p><strong>Success criteria:</strong> Preserve the product's actual shape and details. Match the environment, reflections and shadows.</p>
+
+      <h3>Project 4: Expand a Portrait into a Landscape</h3>
+      <p><strong>Task:</strong> Extend a portrait image into a wider composition using outpainting where available.</p>
+      <p><strong>Success criteria:</strong> The extended environment should continue naturally without obvious seams.</p>
+
+      <h3>Project 5: Restore and Enhance an Old Image</h3>
+      <p><strong>Task:</strong> Improve a low-quality or damaged image.</p>
+      <p><strong>Success criteria:</strong> Reduce visible defects while avoiding invented facial or historical details.</p>
+    </section>
+
+    <section class="lesson-card">
+      <span class="lesson-number">KNOWLEDGE CHECK</span>
+      <h2>Module 06 Quiz</h2>
+      <p>Read each question and open the answer to check your understanding.</p>
+
+      <details class="quiz-answer">
+        <summary>1. What is inpainting?</summary>
+        <p>Editing or regenerating a selected region of an existing image.</p>
+      </details>
+
+      <details class="quiz-answer">
+        <summary>2. What is outpainting?</summary>
+        <p>Extending an image beyond its original boundaries by generating additional content.</p>
+      </details>
+
+      <details class="quiz-answer">
+        <summary>3. Why is masking important?</summary>
+        <p>It identifies the area that should be edited or protected, depending on the tool.</p>
+      </details>
+
+      <details class="quiz-answer">
+        <summary>4. What should you check after replacing a background?</summary>
+        <p>Subject edges, lighting, shadows, perspective, color and background continuity.</p>
+      </details>
+
+      <details class="quiz-answer">
+        <summary>5. Does upscaling always recover real missing details?</summary>
+        <p>No. AI upscaling may synthesize details that were not present in the source image.</p>
+      </details>
+
+      <details class="quiz-answer">
+        <summary>6. What is the main purpose of feathering a mask?</summary>
+        <p>To soften selection boundaries and help the edited area blend more naturally.</p>
+      </details>
+
+      <details class="quiz-answer">
+        <summary>7. Why should you preserve the original image?</summary>
+        <p>To protect the source, compare edits and return to the original if needed.</p>
+      </details>
+
+      <details class="quiz-answer">
+        <summary>8. What causes an inserted object to look artificial?</summary>
+        <p>Incorrect scale, perspective, lighting, shadows, edges or color matching.</p>
+      </details>
+
+      <details class="quiz-answer">
+        <summary>9. What is image-to-image transformation?</summary>
+        <p>Using an existing image as the visual starting point for an AI transformation.</p>
+      </details>
+
+      <details class="quiz-answer">
+        <summary>10. Why must AI-restored details be checked?</summary>
+        <p>Because AI may invent details that were not visible in the original image.</p>
+      </details>
+    </section>
+
+    <section class="lesson-card">
+      <h2>Module 06 Completion Checklist</h2>
+      <p>Complete these tasks before moving to the next module.</p>
+      <ul class="checklist">
+        <li>Understand the difference between generation and editing.</li>
+        <li>Prepare and preserve source images.</li>
+        <li>Understand masks and brush controls.</li>
+        <li>Practice an inpainting workflow.</li>
+        <li>Remove an unwanted object.</li>
+        <li>Replace a background.</li>
+        <li>Understand outpainting.</li>
+        <li>Try image-to-image transformation.</li>
+        <li>Check character and product consistency.</li>
+        <li>Understand lighting and shadow matching.</li>
+        <li>Practice image enhancement and restoration.</li>
+        <li>Complete all five practical projects.</li>
+      </ul>
+      <div class="tip">
+        Remember: A professional edit is not just an attractive result.
+        It should also preserve important details, look believable and meet
+        the actual delivery requirement.
+      </div>
+    </section>
+
+    <section class="module-hero">
+      <h2>Module 06 Completed?</h2>
+      <p>
+        Next: Module 07 — AI Video Generation Fundamentals.
+        We will explore text-to-video, image-to-video, video models,
+        motion, camera direction, duration, aspect ratios and workflow design.
+      </p>
+      <a href="../index.html">Return to AI Creator School</a>
+    </section>
+
+    <div class="module-nav">
+      <a href="module-05.html">← Previous Module</a>
+      <a href="../index.html">Course Home</a>
+    </div>
+  </main>
+  <script src="../script.js"></script>
+</body>
+</html>
