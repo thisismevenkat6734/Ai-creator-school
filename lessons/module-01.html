@@ -1,0 +1,1008 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta name="description" content="Learn AI and Higgsfield fundamentals in Telugu and English. Complete beginner course with examples, practical exercises and quizzes.">
+
+  <meta name="theme-color" content="#080b14">
+
+  <title>Module 01: AI & Higgsfield Fundamentals | AI Creator School</title>
+
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    .lesson-page {
+      max-width: 1050px;
+      margin: auto;
+      padding: 35px 20px 80px;
+    }
+
+    .lesson-top {
+      margin-bottom: 35px;
+    }
+
+    .lesson-top a {
+      display: inline-block;
+      margin-bottom: 25px;
+    }
+
+    .lesson-label {
+      color: #a78bfa;
+      font-weight: 700;
+      letter-spacing: 2px;
+      font-size: 13px;
+      text-transform: uppercase;
+    }
+
+    .lesson-page h1 {
+      font-size: clamp(30px, 5vw, 48px);
+      line-height: 1.2;
+      margin: 15px 0;
+    }
+
+    .lesson-page h2 {
+      font-size: 27px;
+      margin: 35px 0 15px;
+    }
+
+    .lesson-page h3 {
+      font-size: 19px;
+      margin: 24px 0 10px;
+    }
+
+    .lesson-page p,
+    .lesson-page li {
+      line-height: 1.85;
+    }
+
+    .lesson-card {
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 16px;
+      padding: 24px;
+      margin: 22px 0;
+    }
+
+    .lesson-card p:last-child {
+      margin-bottom: 0;
+    }
+
+    .telugu {
+      color: #e4e7f0;
+    }
+
+    .english {
+      color: #b7c2d8;
+    }
+
+    .term {
+      color: #c4b5fd;
+      font-weight: 700;
+    }
+
+    .example {
+      border-left: 4px solid #8b5cf6;
+      padding: 15px 18px;
+      background: rgba(139,92,246,.09);
+      border-radius: 0 10px 10px 0;
+      margin: 18px 0;
+    }
+
+    .prompt-box {
+      background: #050811;
+      border: 1px solid rgba(255,255,255,.13);
+      padding: 18px;
+      border-radius: 12px;
+      overflow-wrap: anywhere;
+      line-height: 1.8;
+    }
+
+    .lesson-page code {
+      color: #d8b4fe;
+    }
+
+    .lesson-page table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .lesson-page th,
+    .lesson-page td {
+      border: 1px solid rgba(255,255,255,.15);
+      padding: 12px;
+      text-align: left;
+      line-height: 1.6;
+    }
+
+    .lesson-page th {
+      background: rgba(139,92,246,.13);
+    }
+
+    .lesson-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 25px 0;
+    }
+
+    .lesson-nav a {
+      border: 1px solid rgba(255,255,255,.15);
+      padding: 10px 14px;
+      border-radius: 9px;
+      text-decoration: none;
+    }
+
+    .lesson-nav a:hover {
+      background: rgba(139,92,246,.15);
+    }
+
+    .lesson-page details {
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 12px;
+      padding: 16px;
+      margin: 12px 0;
+    }
+
+    .lesson-page summary {
+      cursor: pointer;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    .lesson-page details p {
+      margin-bottom: 0;
+    }
+
+    .lesson-checklist li {
+      margin: 8px 0;
+    }
+
+    .lesson-footer {
+      border-top: 1px solid rgba(255,255,255,.15);
+      margin-top: 45px;
+      padding-top: 25px;
+    }
+
+    @media(max-width:600px) {
+      .lesson-page {
+        padding: 25px 15px 55px;
+      }
+
+      .lesson-card {
+        padding: 18px;
+      }
+
+      .lesson-page table {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<main class="lesson-page">
+
+  <!-- MODULE HEADER -->
+
+  <header class="lesson-top">
+
+    <a href="../index.html">← Back to AI Creator School</a>
+
+    <div class="lesson-label">
+      MODULE 01 · BEGINNER LEVEL
+    </div>
+
+    <h1>AI & Higgsfield Fundamentals</h1>
+
+    <p class="english">
+      Understand Artificial Intelligence, Generative AI and the
+      foundations of modern AI-powered creative production.
+    </p>
+
+    <p class="telugu">
+      ఈ Module ద్వారా Artificial Intelligence అంటే ఏమిటి,
+      Generative AI ఎలా పనిచేస్తుంది, Higgsfield వంటి AI
+      creative platforms‌ను ఎలా అర్థం చేసుకోవాలి అనే విషయాలను
+      మొదటి నుంచి నేర్చుకుంటారు.
+    </p>
+
+    <div class="lesson-card">
+      <h3>Module Learning Outcomes</h3>
+
+      <ul class="lesson-checklist">
+        <li>Understand Artificial Intelligence and Machine Learning.</li>
+        <li>Understand Generative AI and AI models.</li>
+        <li>Learn how prompts and references work.</li>
+        <li>Understand image, video, audio and 3D AI.</li>
+        <li>Understand the basic AI creative workflow.</li>
+        <li>Learn responsible and professional AI usage.</li>
+      </ul>
+    </div>
+
+    <nav class="lesson-nav" aria-label="Module lessons">
+      <a href="#lesson-1">Lesson 01</a>
+      <a href="#lesson-2">Lesson 02</a>
+      <a href="#lesson-3">Lesson 03</a>
+      <a href="#lesson-4">Lesson 04</a>
+      <a href="#lesson-5">Lesson 05</a>
+      <a href="#lesson-6">Lesson 06</a>
+      <a href="#quiz">Final Quiz</a>
+    </nav>
+
+  </header>
+
+
+  <!-- LESSON 01 -->
+
+  <section id="lesson-1">
+
+    <div class="lesson-label">LESSON 01</div>
+
+    <h2>What is Artificial Intelligence?</h2>
+
+    <p class="english">
+      Artificial Intelligence (AI) is a field of computer science
+      that focuses on creating systems capable of performing tasks
+      that normally require human intelligence.
+    </p>
+
+    <p class="telugu">
+      Artificial Intelligence (AI) అంటే సాధారణంగా మనుషులు చేసే
+      కొన్ని తెలివైన పనులను కంప్యూటర్లు లేదా machines ద్వారా
+      చేయించే technology.
+    </p>
+
+    <div class="lesson-card">
+      <h3>Examples of AI in Daily Life</h3>
+
+      <ul>
+        <li><strong>Voice Assistants:</strong> Voice commands‌ను అర్థం చేసుకోవడం.</li>
+        <li><strong>Recommendation Systems:</strong> మనకు నచ్చే videos లేదా products సూచించడం.</li>
+        <li><strong>Translation:</strong> ఒక భాషను మరొక భాషలోకి మార్చడం.</li>
+        <li><strong>Image Recognition:</strong> ఫోటోలోని objects‌ను గుర్తించడం.</li>
+        <li><strong>Generative AI:</strong> కొత్త text, images, videos సృష్టించడం.</li>
+      </ul>
+    </div>
+
+    <h3>Important AI Terminology</h3>
+
+    <table>
+      <tr>
+        <th>Term</th>
+        <th>Meaning</th>
+      </tr>
+      <tr>
+        <td>Artificial Intelligence</td>
+        <td>Machines performing intelligent tasks.</td>
+      </tr>
+      <tr>
+        <td>Machine Learning</td>
+        <td>Systems learning patterns from data.</td>
+      </tr>
+      <tr>
+        <td>Deep Learning</td>
+        <td>Machine learning using multi-layer neural networks.</td>
+      </tr>
+      <tr>
+        <td>Neural Network</td>
+        <td>A computational system inspired by connected neurons.</td>
+      </tr>
+      <tr>
+        <td>Algorithm</td>
+        <td>A set of instructions or computational steps.</td>
+      </tr>
+      <tr>
+        <td>Dataset</td>
+        <td>A collection of data used for training or evaluation.</td>
+      </tr>
+    </table>
+
+    <div class="example">
+      <strong>Simple Example:</strong>
+
+      <p>
+        మీరు ఒక AI image tool‌కు ఒక dog photo చూపిస్తే,
+        అది ఆ image‌లో dog ఉందని గుర్తించగలదు.
+      </p>
+
+      <p>
+        This is an example of image recognition, not necessarily
+        image generation.
+      </p>
+    </div>
+
+    <h3>Check Your Understanding</h3>
+
+    <details>
+      <summary>AI మరియు Machine Learning ఒకటేనా?</summary>
+      <p>
+        కాదు. Artificial Intelligence అనేది పెద్ద field.
+        Machine Learning అనేది AIలో ఒక భాగం. Machine Learning
+        ద్వారా systems dataలోని patterns నేర్చుకుంటాయి.
+      </p>
+    </details>
+
+  </section>
+
+
+  <!-- LESSON 02 -->
+
+  <section id="lesson-2">
+
+    <div class="lesson-label">LESSON 02</div>
+
+    <h2>What is Generative AI?</h2>
+
+    <p class="english">
+      Generative AI refers to AI systems that can generate new
+      content such as text, images, audio, video and other media
+      based on learned patterns and user instructions.
+    </p>
+
+    <p class="telugu">
+      Generative AI అంటే మనం ఇచ్చిన instructions ఆధారంగా
+      కొత్త content తయారు చేసే AI technology.
+      ఇది text మాత్రమే కాదు, images, videos, audio వంటి
+      content కూడా సృష్టించగలదు.
+    </p>
+
+    <h3>Types of Generative AI</h3>
+
+    <table>
+      <tr>
+        <th>Category</th>
+        <th>Output</th>
+        <th>Example Use</th>
+      </tr>
+      <tr>
+        <td>Text Generation</td>
+        <td>Text</td>
+        <td>Scripts, articles and stories</td>
+      </tr>
+      <tr>
+        <td>Image Generation</td>
+        <td>Images</td>
+        <td>Posters, artwork and product images</td>
+      </tr>
+      <tr>
+        <td>Video Generation</td>
+        <td>Video clips</td>
+        <td>Advertisements and cinematic scenes</td>
+      </tr>
+      <tr>
+        <td>Audio Generation</td>
+        <td>Speech and audio</td>
+        <td>Voice-overs and sound effects</td>
+      </tr>
+      <tr>
+        <td>3D Generation</td>
+        <td>3D assets</td>
+        <td>Objects and virtual environments</td>
+      </tr>
+    </table>
+
+    <h3>How Generative AI Works</h3>
+
+    <ol>
+      <li><strong>Training Data:</strong> The model is trained using data.</li>
+      <li><strong>Learning:</strong> It learns patterns and relationships.</li>
+      <li><strong>Input:</strong> The user provides a prompt or reference.</li>
+      <li><strong>Generation:</strong> The model produces a result.</li>
+      <li><strong>Evaluation:</strong> The user checks and improves the result.</li>
+    </ol>
+
+    <div class="lesson-card">
+      <h3>Important Terms</h3>
+
+      <p><span class="term">Generative Model:</span>
+        A model designed to generate new content.</p>
+
+      <p><span class="term">Diffusion Model:</span>
+        A type of generative model commonly used in image and
+        video generation. It learns to transform noisy data
+        into structured content.</p>
+
+      <p><span class="term">Transformer:</span>
+        A neural network architecture used in many modern
+        language and multimodal models.</p>
+
+      <p><span class="term">Multimodal AI:</span>
+        AI that can work with more than one type of data,
+        such as text, images and audio.</p>
+    </div>
+
+    <h3>Practical Understanding</h3>
+
+    <div class="example">
+      <p><strong>Input:</strong></p>
+      <p>A red sports car parked on a mountain road at sunrise.</p>
+
+      <p><strong>Possible Output:</strong></p>
+      <p>
+        An AI-generated image representing a red sports car
+        on a mountain road at sunrise.
+      </p>
+    </div>
+
+    <p>
+      Remember: AI does not guarantee that every generated
+      result will be accurate or identical to your imagination.
+      Prompt quality, model capabilities and settings matter.
+    </p>
+
+  </section>
+
+
+  <!-- LESSON 03 -->
+
+  <section id="lesson-3">
+
+    <div class="lesson-label">LESSON 03</div>
+
+    <h2>What is Higgsfield AI?</h2>
+
+    <p class="english">
+      Higgsfield is an AI-powered creative platform designed
+      to help users create and work with visual content through
+      different AI models and creative tools.
+    </p>
+
+    <p class="telugu">
+      Higgsfield అనేది AI ఆధారంగా images, videos మరియు
+      creative visual content తయారు చేయడానికి ఉపయోగించే
+      platform. ఇందులో వివిధ AI models మరియు specialized
+      creative tools ఉంటాయి.
+    </p>
+
+    <div class="lesson-card">
+      <h3>What Can You Learn to Create?</h3>
+
+      <ul>
+        <li>AI-generated images and visual concepts.</li>
+        <li>Text-to-video and image-to-video content.</li>
+        <li>Character and visual consistency workflows.</li>
+        <li>Cinematic camera movements and scenes.</li>
+        <li>Storyboards and multi-shot concepts.</li>
+        <li>Marketing and advertising content.</li>
+        <li>Talking characters and lip-sync workflows.</li>
+        <li>Creative experiments using available AI models.</li>
+      </ul>
+    </div>
+
+    <h3>Platform vs Tool vs Model</h3>
+
+    <p>
+      ఈ మూడు terms‌ను ఒకటిగా అనుకోకూడదు.
+    </p>
+
+    <table>
+      <tr>
+        <th>Term</th>
+        <th>Explanation</th>
+      </tr>
+      <tr>
+        <td>Platform</td>
+        <td>The overall environment where tools and models are available.</td>
+      </tr>
+      <tr>
+        <td>Tool</td>
+        <td>A feature that performs a particular creative task.</td>
+      </tr>
+      <tr>
+        <td>Model</td>
+        <td>The underlying AI system used to generate or process content.</td>
+      </tr>
+      <tr>
+        <td>Workflow</td>
+        <td>A sequence of steps used to complete a creative task.</td>
+      </tr>
+    </table>
+
+    <div class="example">
+      <strong>Example:</strong>
+
+      <p>
+        ఒక platform‌లో image generation tool ఉండవచ్చు.
+        ఆ tool ద్వారా పనిచేసే AI model ఒకటి లేదా అంతకంటే
+        ఎక్కువ ఉండవచ్చు.
+      </p>
+
+      <p>
+        The platform is the environment, the tool is the
+        functionality, and the model performs the AI task.
+      </p>
+    </div>
+
+    <h3>Important Learning Rule</h3>
+
+    <p>
+      Higgsfieldలో tools, model names, pricing, credits మరియు
+      availability కాలానుగుణంగా మారవచ్చు. అందువల్ల ప్రతి
+      advanced lesson‌లో current availability మరియు official
+      documentation‌ను verify చేయాలి.
+    </p>
+
+    <p>
+      AI Creator School అనేది independent educational project.
+      ఇది Higgsfield యొక్క official website లేదా affiliated
+      academy కాదు.
+    </p>
+
+  </section>
+
+
+  <!-- LESSON 04 -->
+
+  <section id="lesson-4">
+
+    <div class="lesson-label">LESSON 04</div>
+
+    <h2>How an AI Creative Workflow Works</h2>
+
+    <p class="english">
+      An AI creative workflow is a structured sequence of
+      decisions and actions used to turn an idea into a
+      finished creative output.
+    </p>
+
+    <p class="telugu">
+      ఒక ఆలోచనను తీసుకొని దాన్ని final image లేదా videoగా
+      తయారు చేసే వరకు మనం చేసే అన్ని steps‌ను AI creative
+      workflow అంటాం.
+    </p>
+
+    <h3>Professional Workflow</h3>
+
+    <ol>
+      <li>
+        <strong>Idea Development</strong>
+        <p>ఏ content తయారు చేయాలో నిర్ణయించాలి.</p>
+      </li>
+
+      <li>
+        <strong>Concept Design</strong>
+        <p>Characters, locations, mood మరియు visual style నిర్ణయించాలి.</p>
+      </li>
+
+      <li>
+        <strong>Prompt Writing</strong>
+        <p>AIకి clear instructions ఇవ్వాలి.</p>
+      </li>
+
+      <li>
+        <strong>Model Selection</strong>
+        <p>పని అవసరానికి తగిన available model ఎంచుకోవాలి.</p>
+      </li>
+
+      <li>
+        <strong>Generation</strong>
+        <p>AI output తయారు చేయాలి.</p>
+      </li>
+
+      <li>
+        <strong>Review</strong>
+        <p>Errors, unwanted details మరియు quality పరిశీలించాలి.</p>
+      </li>
+
+      <li>
+        <strong>Editing</strong>
+        <p>అవసరమైన corrections చేయాలి.</p>
+      </li>
+
+      <li>
+        <strong>Final Export</strong>
+        <p>అవసరమైన format మరియు resolutionలో export చేయాలి.</p>
+      </li>
+    </ol>
+
+    <h3>Understanding Basic Settings</h3>
+
+    <table>
+      <tr>
+        <th>Setting</th>
+        <th>Meaning</th>
+      </tr>
+      <tr>
+        <td>Aspect Ratio</td>
+        <td>Width-to-height proportion of an image or video.</td>
+      </tr>
+      <tr>
+        <td>Resolution</td>
+        <td>Output dimensions and pixel detail.</td>
+      </tr>
+      <tr>
+        <td>Duration</td>
+        <td>Length of the generated video.</td>
+      </tr>
+      <tr>
+        <td>Seed</td>
+        <td>A value that may help control generation variation in supported models.</td>
+      </tr>
+      <tr>
+        <td>Reference</td>
+        <td>Image or other supported input used to guide generation.</td>
+      </tr>
+      <tr>
+        <td>Credits</td>
+        <td>Platform usage units, where applicable.</td>
+      </tr>
+    </table>
+
+    <div class="lesson-card">
+      <h3>Common Aspect Ratios</h3>
+
+      <ul>
+        <li><strong>16:9</strong> — Landscape videos and YouTube.</li>
+        <li><strong>9:16</strong> — Vertical videos and short-form content.</li>
+        <li><strong>1:1</strong> — Square social media posts.</li>
+        <li><strong>4:5</strong> — Portrait social media images.</li>
+        <li><strong>3:2</strong> — Common photography format.</li>
+      </ul>
+
+      <p>
+        Note: These are common formats. The actual options
+        depend on the selected tool or model.
+      </p>
+    </div>
+
+  </section>
+
+
+  <!-- LESSON 05 -->
+
+  <section id="lesson-5">
+
+    <div class="lesson-label">LESSON 05</div>
+
+    <h2>Image AI vs Video AI vs Audio AI</h2>
+
+    <p class="english">
+      Different AI systems are designed for different types
+      of media. A professional creator should understand
+      which technology is suitable for each task.
+    </p>
+
+    <p class="telugu">
+      Image, Video, Audio AI అన్నీ ఒకే పని చేయవు.
+      ఏ పని కోసం ఏ technology ఉపయోగించాలో తెలుసుకోవడం
+      చాలా ముఖ్యం.
+    </p>
+
+    <h3>1. Image AI</h3>
+
+    <p>
+      Image AI ద్వారా still images తయారు చేయవచ్చు లేదా
+      existing images‌ను edit చేయవచ్చు.
+    </p>
+
+    <p><strong>Uses:</strong> Posters, product images,
+      character concepts, thumbnails and artwork.</p>
+
+    <h3>2. Video AI</h3>
+
+    <p>
+      Video AI ద్వారా moving scenes మరియు video clips
+      generate చేయవచ్చు.
+    </p>
+
+    <p><strong>Uses:</strong> Cinematic scenes, advertisements,
+      social media videos and creative storytelling.</p>
+
+    <h3>3. Audio AI</h3>
+
+    <p>
+      Audio AI ద్వారా speech, voice-over, music లేదా
+      sound-related content తయారు చేయవచ్చు.
+    </p>
+
+    <p><strong>Uses:</strong> Narration, dubbing,
+      voice content and sound design.</p>
+
+    <h3>4. 3D AI</h3>
+
+    <p>
+      3D AI workflows ద్వారా 3D objects, assets లేదా
+      environments తయారు చేయడంలో సహాయం పొందవచ్చు.
+    </p>
+
+    <h3>Combined Production Example</h3>
+
+    <div class="lesson-card">
+      <h3>Project: Create a Short Product Advertisement</h3>
+
+      <ol>
+        <li>Image AI — Create a product concept image.</li>
+        <li>Video AI — Animate the product scene.</li>
+        <li>Audio AI — Create or add narration.</li>
+        <li>Editing — Combine and refine the content.</li>
+        <li>Export — Produce the final advertisement.</li>
+      </ol>
+
+      <p>
+        ఈ విధంగా multiple AI technologies‌ను ఒకే
+        production workflowలో ఉపయోగించవచ్చు.
+      </p>
+    </div>
+
+  </section>
+
+
+  <!-- LESSON 06 -->
+
+  <section id="lesson-6">
+
+    <div class="lesson-label">LESSON 06</div>
+
+    <h2>AI Limitations, Ethics & Professional Mindset</h2>
+
+    <p class="english">
+      AI is a powerful creative assistant, but its output
+      requires human review, judgment and responsible use.
+    </p>
+
+    <p class="telugu">
+      AI చాలా శక్తివంతమైన tool అయినప్పటికీ ప్రతి result
+      perfect‌గా ఉండదు. Human creativity, checking మరియు
+      editing ఇప్పటికీ చాలా ముఖ్యం.
+    </p>
+
+    <h3>Common AI Limitations</h3>
+
+    <ul>
+      <li>Incorrect text or spelling inside generated images.</li>
+      <li>Unnatural hands, faces or body proportions.</li>
+      <li>Inconsistent characters across multiple scenes.</li>
+      <li>Unexpected camera movement or object motion.</li>
+      <li>Incorrect physical interactions.</li>
+      <li>Different outputs from similar prompts.</li>
+      <li>Generation time, credit and model restrictions.</li>
+    </ul>
+
+    <h3>Responsible AI Rules</h3>
+
+    <ol>
+      <li>Use images, voices and identities with appropriate permission.</li>
+      <li>Do not impersonate people deceptively.</li>
+      <li>Respect copyright and licensing conditions.</li>
+      <li>Do not create misleading or harmful content.</li>
+      <li>Protect private and confidential information.</li>
+      <li>Review generated content before publishing.</li>
+    </ol>
+
+    <div class="lesson-card">
+      <h3>Professional Creator Mindset</h3>
+
+      <p>
+        A professional AI creator does not depend only on
+        clicking the Generate button.
+      </p>
+
+      <p>
+        A professional creator understands the concept,
+        chooses the right model, writes clear prompts,
+        reviews the output and improves it through iteration.
+      </p>
+
+      <p>
+        మంచి AI Creator అంటే AI tool ఉపయోగించడం తెలిసిన వ్యక్తి
+        మాత్రమే కాదు. Creative thinking, visual storytelling,
+        problem solving మరియు quality control తెలిసిన వ్యక్తి.
+      </p>
+    </div>
+
+  </section>
+
+
+  <!-- PRACTICAL ASSIGNMENT -->
+
+  <section id="assignment">
+
+    <div class="lesson-label">MODULE PRACTICAL</div>
+
+    <h2>Practical Assignment — Your First AI Concept</h2>
+
+    <p>
+      ఈ assignment ద్వారా మీరు AI workflow‌ను అర్థం చేసుకోవాలి.
+      ఇది concept exercise. మీకు ఇంకా Higgsfield account
+      లేకపోయినా చేయవచ్చు.
+    </p>
+
+    <div class="lesson-card">
+
+      <h3>Project: Futuristic Indian City</h3>
+
+      <p><strong>Goal:</strong> Create a visual concept of a futuristic Indian city.</p>
+
+      <h3>Sample Prompt</h3>
+
+      <div class="prompt-box">
+        A futuristic Indian city at golden sunset,
+        modern architectural skyscrapers, clean streets,
+        advanced public transportation, beautiful cinematic
+        atmosphere, realistic environmental lighting,
+        detailed architecture, wide-angle composition,
+        professional concept art.
+      </div>
+
+      <h3>Understand the Prompt</h3>
+
+      <ul>
+        <li><strong>Subject:</strong> Futuristic Indian city.</li>
+        <li><strong>Location:</strong> Modern urban environment.</li>
+        <li><strong>Lighting:</strong> Golden sunset.</li>
+        <li><strong>Style:</strong> Cinematic concept art.</li>
+        <li><strong>Composition:</strong> Wide-angle.</li>
+        <li><strong>Detail:</strong> Detailed architecture.</li>
+      </ul>
+
+      <h3>Your Tasks</h3>
+
+      <ol>
+        <li>Write your own city concept.</li>
+        <li>Identify the main subject and environment.</li>
+        <li>Choose a suitable visual style.</li>
+        <li>Write a complete prompt.</li>
+        <li>Identify what you would check in the output.</li>
+      </ol>
+
+    </div>
+
+  </section>
+
+
+  <!-- FINAL QUIZ -->
+
+  <section id="quiz">
+
+    <div class="lesson-label">KNOWLEDGE CHECK</div>
+
+    <h2>Module 01 — Final Quiz</h2>
+
+    <p>
+      ఈ ప్రశ్నలకు సమాధానాలు చెప్పగలిగితే ఈ Module‌లోని
+      fundamentals మీకు అర్థమైనట్లు.
+    </p>
+
+    <details>
+      <summary>1. What does AI stand for?</summary>
+      <p>Artificial Intelligence.</p>
+    </details>
+
+    <details>
+      <summary>2. What is Generative AI?</summary>
+      <p>
+        Generative AI creates new content such as text,
+        images, video or audio based on learned patterns
+        and user inputs.
+      </p>
+    </details>
+
+    <details>
+      <summary>3. What is a Prompt?</summary>
+      <p>
+        A prompt is an instruction or description given
+        to an AI system to guide its output.
+      </p>
+    </details>
+
+    <details>
+      <summary>4. What is an AI Model?</summary>
+      <p>
+        An AI model is a trained computational system
+        that performs tasks such as generating or
+        processing content.
+      </p>
+    </details>
+
+    <details>
+      <summary>5. What is the difference between Image AI and Video AI?</summary>
+      <p>
+        Image AI creates or edits still images.
+        Video AI creates or processes moving visual content.
+      </p>
+    </details>
+
+    <details>
+      <summary>6. What is a Reference Image?</summary>
+      <p>
+        A reference image is a visual input used to guide
+        an AI system, when supported by the selected tool.
+      </p>
+    </details>
+
+    <details>
+      <summary>7. What is Aspect Ratio?</summary>
+      <p>
+        Aspect ratio describes the proportional relationship
+        between the width and height of an image or video.
+      </p>
+    </details>
+
+    <details>
+      <summary>8. Why should AI output be reviewed?</summary>
+      <p>
+        AI output may contain errors, inconsistencies or
+        unwanted details. Human review improves quality
+        and reliability.
+      </p>
+    </details>
+
+    <details>
+      <summary>9. What is a Creative Workflow?</summary>
+      <p>
+        It is a structured process from idea development
+        to generation, review, editing and final export.
+      </p>
+    </details>
+
+    <details>
+      <summary>10. Is AI Creator School officially affiliated with Higgsfield?</summary>
+      <p>
+        No. AI Creator School is an independent educational
+        project and is not officially affiliated with Higgsfield.
+      </p>
+    </details>
+
+  </section>
+
+
+  <!-- COMPLETION CHECKLIST -->
+
+  <section id="completion">
+
+    <div class="lesson-label">MODULE REVIEW</div>
+
+    <h2>Before Moving to Module 02</h2>
+
+    <div class="lesson-card">
+
+      <ul class="lesson-checklist">
+        <li>Understand AI fundamentals.</li>
+        <li>Understand Generative AI.</li>
+        <li>Understand platform, tool and model.</li>
+        <li>Understand the basic creative workflow.</li>
+        <li>Understand Image, Video and Audio AI.</li>
+        <li>Complete the practical assignment.</li>
+        <li>Review all ten quiz answers.</li>
+      </ul>
+
+      <p>
+        Module 01 content is available for learning.
+        Video tutorials, interactive quiz scoring and
+        automatic progress tracking will be connected
+        in later development stages.
+      </p>
+
+    </div>
+
+  </section>
+
+
+  <!-- MODULE FOOTER -->
+
+  <footer class="lesson-footer">
+
+    <a href="../index.html">← Back to Home</a>
+
+    <p>
+      AI Creator School · Learn. Create. Master.
+    </p>
+
+    <p>
+      Independent Telugu + English AI Education Platform.
+    </p>
+
+  </footer>
+
+</main>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
