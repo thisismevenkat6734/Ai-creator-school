@@ -1,0 +1,1076 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b14">
+
+  <meta name="description" content="Complete Higgsfield account setup, dashboard navigation, workspace, settings and interface guide in Telugu and English.">
+
+  <title>Module 02: Account Setup & Dashboard | AI Creator School</title>
+
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    .lesson-page {
+      max-width: 1050px;
+      margin: auto;
+      padding: 35px 20px 80px;
+    }
+
+    .lesson-label {
+      color: #a78bfa;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .lesson-page h1 {
+      font-size: clamp(30px, 5vw, 46px);
+      line-height: 1.2;
+      margin: 15px 0;
+    }
+
+    .lesson-page h2 {
+      font-size: 27px;
+      margin: 35px 0 15px;
+    }
+
+    .lesson-page h3 {
+      font-size: 19px;
+      margin: 24px 0 10px;
+    }
+
+    .lesson-page p,
+    .lesson-page li {
+      line-height: 1.85;
+    }
+
+    .lesson-card {
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 16px;
+      padding: 23px;
+      margin: 22px 0;
+    }
+
+    .lesson-page .telugu {
+      color: #e4e7f0;
+    }
+
+    .lesson-page .english {
+      color: #b7c2d8;
+    }
+
+    .lesson-page .term {
+      color: #c4b5fd;
+      font-weight: 700;
+    }
+
+    .lesson-page table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .lesson-page th,
+    .lesson-page td {
+      border: 1px solid rgba(255,255,255,.15);
+      padding: 12px;
+      text-align: left;
+      line-height: 1.6;
+    }
+
+    .lesson-page th {
+      background: rgba(139,92,246,.13);
+    }
+
+    .lesson-page details {
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 12px;
+      padding: 16px;
+      margin: 12px 0;
+    }
+
+    .lesson-page summary {
+      cursor: pointer;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    .lesson-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 25px 0;
+    }
+
+    .lesson-nav a,
+    .lesson-page .back-link {
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,.15);
+      padding: 10px 14px;
+      border-radius: 9px;
+      text-decoration: none;
+    }
+
+    .lesson-page .example {
+      background: rgba(139,92,246,.09);
+      border-left: 4px solid #8b5cf6;
+      border-radius: 0 10px 10px 0;
+      padding: 16px;
+      margin: 18px 0;
+    }
+
+    .lesson-page .warning {
+      background: rgba(245,158,11,.08);
+      border-left: 4px solid #f59e0b;
+      border-radius: 0 10px 10px 0;
+      padding: 16px;
+      margin: 18px 0;
+    }
+
+    .lesson-page .step-number {
+      color: #c4b5fd;
+      font-weight: 800;
+    }
+
+    .lesson-footer {
+      border-top: 1px solid rgba(255,255,255,.15);
+      margin-top: 45px;
+      padding-top: 25px;
+    }
+
+    @media(max-width:600px) {
+      .lesson-page {
+        padding: 25px 15px 55px;
+      }
+
+      .lesson-card {
+        padding: 17px;
+      }
+
+      .lesson-page table {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<main class="lesson-page">
+
+  <header>
+    <a class="back-link" href="../index.html">
+      ← Back to AI Creator School
+    </a>
+
+    <br><br>
+
+    <div class="lesson-label">MODULE 02 · BEGINNER LEVEL</div>
+
+    <h1>Account Setup, Dashboard & Interface</h1>
+
+    <p class="english">
+      Learn how to access Higgsfield, understand the workspace,
+      navigate the dashboard and manage your creative projects.
+    </p>
+
+    <p class="telugu">
+      ఈ Module‌లో Higgsfield account‌ను ఎలా ప్రారంభించాలి,
+      login ఎలా చేయాలి, dashboard ఎలా ఉపయోగించాలి, tools,
+      models, assets మరియు account settings‌ను ఎలా అర్థం
+      చేసుకోవాలో నేర్చుకుంటారు.
+    </p>
+
+    <div class="lesson-card">
+      <h3>Learning Objectives</h3>
+      <ul>
+        <li>Understand account creation and sign-in.</li>
+        <li>Learn basic account security.</li>
+        <li>Understand the Higgsfield dashboard.</li>
+        <li>Navigate creative tools and model selection.</li>
+        <li>Understand assets and generation history.</li>
+        <li>Learn credits, settings and account management.</li>
+        <li>Understand troubleshooting and safe account practices.</li>
+      </ul>
+    </div>
+
+    <nav class="lesson-nav" aria-label="Module lessons">
+      <a href="#lesson-1">Lesson 01</a>
+      <a href="#lesson-2">Lesson 02</a>
+      <a href="#lesson-3">Lesson 03</a>
+      <a href="#lesson-4">Lesson 04</a>
+      <a href="#lesson-5">Lesson 05</a>
+      <a href="#lesson-6">Lesson 06</a>
+      <a href="#lesson-7">Lesson 07</a>
+      <a href="#lesson-8">Lesson 08</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+  </header>
+
+
+  <!-- LESSON 01 -->
+
+  <section id="lesson-1">
+
+    <div class="lesson-label">LESSON 01</div>
+    <h2>Before Creating Your Higgsfield Account</h2>
+
+    <p class="english">
+      Before registering, prepare the basic requirements
+      needed to access and use the platform.
+    </p>
+
+    <p class="telugu">
+      Account create చేయడానికి ముందు కొన్ని విషయాలు సిద్ధం
+      చేసుకోవాలి. ఇలా చేయడం వల్ల registration మరియు
+      account management సులభమవుతాయి.
+    </p>
+
+    <div class="lesson-card">
+      <h3>Basic Requirements</h3>
+      <ul>
+        <li>A supported web browser.</li>
+        <li>A stable internet connection.</li>
+        <li>An email address you can access.</li>
+        <li>A secure password or supported authentication method.</li>
+        <li>A device capable of accessing the website.</li>
+        <li>Access to the official platform website.</li>
+      </ul>
+    </div>
+
+    <h3>Recommended Browser Practices</h3>
+
+    <p>
+      Use an updated browser. Keep JavaScript and essential
+      website features enabled. If the website does not load,
+      check browser compatibility and internet connectivity.
+    </p>
+
+    <h3>Device Preparation</h3>
+
+    <table>
+      <tr>
+        <th>Device</th>
+        <th>Preparation</th>
+      </tr>
+      <tr>
+        <td>Mobile</td>
+        <td>Use an updated browser and a stable connection.</td>
+      </tr>
+      <tr>
+        <td>Desktop</td>
+        <td>Use a modern browser and a comfortable screen size.</td>
+      </tr>
+      <tr>
+        <td>Tablet</td>
+        <td>Check responsive layout and browser support.</td>
+      </tr>
+    </table>
+
+    <div class="warning">
+      <strong>Important:</strong>
+      Higgsfield interface and supported devices may change.
+      Always check the current official requirements before
+      purchasing a subscription or depending on a specific feature.
+    </div>
+
+  </section>
+
+
+  <!-- LESSON 02 -->
+
+  <section id="lesson-2">
+
+    <div class="lesson-label">LESSON 02</div>
+    <h2>How to Create a Higgsfield Account</h2>
+
+    <p class="english">
+      Account registration gives you access to the platform's
+      available features according to your account and plan.
+    </p>
+
+    <p class="telugu">
+      Higgsfield ఉపయోగించడానికి ముందుగా official website‌లో
+      account registration చేయాలి. Registration సమయంలో
+      కనిపించే options‌ను బట్టి account create చేయాలి.
+    </p>
+
+    <h3>Step-by-Step Registration</h3>
+
+    <div class="lesson-card">
+      <p><span class="step-number">Step 01 —</span> Open the official website.</p>
+      <p>
+        Browser‌లో Higgsfield official website‌ను open చేయండి.
+        Website address‌ను జాగ్రత్తగా verify చేయండి.
+      </p>
+
+      <p><span class="step-number">Step 02 —</span> Find the account option.</p>
+      <p>
+        Sign Up, Get Started లేదా కనిపించే registration
+        option‌ను select చేయండి.
+      </p>
+
+      <p><span class="step-number">Step 03 —</span> Choose an available sign-up method.</p>
+      <p>
+        Website‌లో ప్రస్తుతం అందుబాటులో ఉన్న authentication
+        options‌లో ఒకదాన్ని ఎంచుకోండి. Email లేదా supported
+        third-party sign-in option ఉండవచ్చు.
+      </p>
+
+      <p><span class="step-number">Step 04 —</span> Complete verification.</p>
+      <p>
+        Verification అడిగితే official instructions follow
+        చేయండి. Email verification code లేదా link వస్తే
+        దాన్ని మీ account‌లోనే ఉపయోగించండి.
+      </p>
+
+      <p><span class="step-number">Step 05 —</span> Review account details.</p>
+      <p>
+        Account information సరిగా ఉందో పరిశీలించండి.
+        అవసరమైతే profile setup complete చేయండి.
+      </p>
+
+      <p><span class="step-number">Step 06 —</span> Open your workspace.</p>
+      <p>
+        Registration పూర్తయిన తర్వాత dashboard లేదా
+        workspace‌కు వెళ్లండి.
+      </p>
+    </div>
+
+    <h3>Account Registration Vocabulary</h3>
+
+    <table>
+      <tr>
+        <th>Term</th>
+        <th>Meaning</th>
+      </tr>
+      <tr>
+        <td>Sign Up</td>
+        <td>Create a new account.</td>
+      </tr>
+      <tr>
+        <td>Sign In</td>
+        <td>Access an existing account.</td>
+      </tr>
+      <tr>
+        <td>Verification</td>
+        <td>Confirm account ownership or identity.</td>
+      </tr>
+      <tr>
+        <td>Authentication</td>
+        <td>Process of verifying a user's access.</td>
+      </tr>
+      <tr>
+        <td>Profile</td>
+        <td>Account information associated with the user.</td>
+      </tr>
+      <tr>
+        <td>Session</td>
+        <td>A period during which you remain signed in.</td>
+      </tr>
+    </table>
+
+    <div class="warning">
+      Never share your password, verification code or recovery
+      details with another person. AI Creator School does not
+      need your Higgsfield login credentials.
+    </div>
+
+  </section>
+
+
+  <!-- LESSON 03 -->
+
+  <section id="lesson-3">
+
+    <div class="lesson-label">LESSON 03</div>
+    <h2>Login, Logout & Account Security</h2>
+
+    <p class="english">
+      Authentication protects access to your account and
+      personal workspace.
+    </p>
+
+    <p class="telugu">
+      మీరు account create చేసిన తర్వాత ప్రతిసారి అవసరమైనప్పుడు
+      login అవ్వవచ్చు. మీ account‌ను సురక్షితంగా ఉంచడం కూడా
+      చాలా ముఖ్యం.
+    </p>
+
+    <h3>Login Process</h3>
+
+    <ol>
+      <li>Open the official Higgsfield website.</li>
+      <li>Select the sign-in option.</li>
+      <li>Use your registered authentication method.</li>
+      <li>Complete any requested verification.</li>
+      <li>Confirm that you are accessing the correct account.</li>
+    </ol>
+
+    <h3>Logout Process</h3>
+
+    <ol>
+      <li>Open the account menu or profile area.</li>
+      <li>Find the sign-out or logout option.</li>
+      <li>Confirm if the website requests confirmation.</li>
+      <li>Close the session, especially on shared devices.</li>
+    </ol>
+
+    <h3>Account Security Checklist</h3>
+
+    <div class="lesson-card">
+      <ul>
+        <li>Use a strong and unique password where applicable.</li>
+        <li>Enable additional security options if available.</li>
+        <li>Do not use public computers for sensitive account access.</li>
+        <li>Do not share verification codes.</li>
+        <li>Check suspicious emails and links carefully.</li>
+        <li>Log out from devices you do not control.</li>
+        <li>Use official account recovery options.</li>
+      </ul>
+    </div>
+
+    <details>
+      <summary>What if I forget my password?</summary>
+      <p>
+        Use the official password recovery process if the
+        selected sign-in method supports it. If you use a
+        third-party login, recovery may need to happen through
+        that provider.
+      </p>
+    </details>
+
+    <details>
+      <summary>Why should I avoid shared accounts?</summary>
+      <p>
+        Shared accounts can create privacy, security, ownership
+        and usage-limit problems. Follow the platform's
+        account-sharing terms.
+      </p>
+    </details>
+
+  </section>
+
+
+  <!-- LESSON 04 -->
+
+  <section id="lesson-4">
+
+    <div class="lesson-label">LESSON 04</div>
+    <h2>Understanding the Higgsfield Dashboard</h2>
+
+    <p class="english">
+      A dashboard is the main workspace from which users
+      access available creative features and manage projects.
+    </p>
+
+    <p class="telugu">
+      Dashboard అనేది account‌లోకి login అయిన తర్వాత
+      కనిపించే ప్రధాన workspace. ఇక్కడి నుంచే available
+      creative tools, models మరియు projects‌ను access
+      చేయవచ్చు.
+    </p>
+
+    <h3>Dashboard Areas to Understand</h3>
+
+    <p>
+      Actual interface layout may change. The following is a
+      learning map of the common functional areas to identify
+      in the current dashboard, not a guarantee that every
+      item appears in the same location.
+    </p>
+
+    <table>
+      <tr>
+        <th>Area</th>
+        <th>Purpose</th>
+      </tr>
+      <tr>
+        <td>Home / Dashboard</td>
+        <td>Main workspace and navigation.</td>
+      </tr>
+      <tr>
+        <td>Create</td>
+        <td>Start available creative workflows.</td>
+      </tr>
+      <tr>
+        <td>Image</td>
+        <td>Access available image creation workflows.</td>
+      </tr>
+      <tr>
+        <td>Video</td>
+        <td>Access available video generation workflows.</td>
+      </tr>
+      <tr>
+        <td>Models</td>
+        <td>Explore available AI models.</td>
+      </tr>
+      <tr>
+        <td>Studios</td>
+        <td>Access specialized creative environments.</td>
+      </tr>
+      <tr>
+        <td>Assets / Library</td>
+        <td>Find saved or generated content where supported.</td>
+      </tr>
+      <tr>
+        <td>Account / Settings</td>
+        <td>Manage account-related preferences and details.</td>
+      </tr>
+    </table>
+
+    <h3>How to Explore the Dashboard</h3>
+
+    <ol>
+      <li>Start from the main dashboard.</li>
+      <li>Identify the main navigation options.</li>
+      <li>Open one feature at a time.</li>
+      <li>Read the tool description and supported inputs.</li>
+      <li>Return to the dashboard before opening another feature.</li>
+      <li>Record what each area is designed to do.</li>
+    </ol>
+
+    <div class="example">
+      <strong>Practice:</strong>
+      <p>
+        Open the dashboard and identify where you can start
+        a new image or video task. Do not generate content yet.
+        First understand the navigation.
+      </p>
+    </div>
+
+  </section>
+
+
+  <!-- LESSON 05 -->
+
+  <section id="lesson-5">
+
+    <div class="lesson-label">LESSON 05</div>
+    <h2>Tools, Models & Studios Navigation</h2>
+
+    <p class="english">
+      Different tools, models and studios serve different
+      creative purposes. Understanding their roles helps
+      you choose the right workflow.
+    </p>
+
+    <p class="telugu">
+      ఒకే పని కోసం అన్ని AI tools ఉపయోగించాల్సిన అవసరం లేదు.
+      మీ project అవసరాన్ని బట్టి సరైన tool, model లేదా
+      studio ఎంచుకోవాలి.
+    </p>
+
+    <h3>Understanding the Differences</h3>
+
+    <table>
+      <tr>
+        <th>Component</th>
+        <th>Role</th>
+      </tr>
+      <tr>
+        <td>Tool</td>
+        <td>Performs a particular creative operation.</td>
+      </tr>
+      <tr>
+        <td>Model</td>
+        <td>Generates or processes content using AI.</td>
+      </tr>
+      <tr>
+        <td>Studio</td>
+        <td>Provides a specialized creative workflow or workspace.</td>
+      </tr>
+      <tr>
+        <td>Feature</td>
+        <td>A specific capability inside a platform or tool.</td>
+      </tr>
+    </table>
+
+    <h3>Model Selection Basics</h3>
+
+    <p>
+      Model selection should be based on the task, not just
+      the popularity of a model.
+    </p>
+
+    <ul>
+      <li>Check whether the model supports your task.</li>
+      <li>Check available input types.</li>
+      <li>Check output quality and supported formats.</li>
+      <li>Check generation duration and limits.</li>
+      <li>Check credit usage before generation.</li>
+      <li>Compare results using small test generations where practical.</li>
+    </ul>
+
+    <h3>Studio Selection Basics</h3>
+
+    <p>
+      A specialized studio may provide a workflow that combines
+      several controls or creative steps.
+    </p>
+
+    <div class="lesson-card">
+      <h3>Example Decision</h3>
+
+      <p><strong>Goal:</strong> Create a cinematic scene.</p>
+
+      <p>
+        First identify whether you need a still image,
+        a video clip, a storyboard, character consistency
+        or camera movement.
+      </p>
+
+      <p>
+        Then select the appropriate currently available
+        model or specialized creative environment.
+      </p>
+    </div>
+
+    <div class="warning">
+      Tool names, model availability and navigation may change.
+      A feature shown in an older tutorial may have moved,
+      changed its name or become unavailable. Always verify
+      the current interface.
+    </div>
+
+  </section>
+
+
+  <!-- LESSON 06 -->
+
+  <section id="lesson-6">
+
+    <div class="lesson-label">LESSON 06</div>
+    <h2>Assets, Library & Generation History</h2>
+
+    <p class="english">
+      Creative assets are the files and results associated
+      with your projects. Understanding asset management
+      helps you organize your work.
+    </p>
+
+    <p class="telugu">
+      మీరు generate చేసిన images, videos లేదా ఇతర project
+      outputs‌ను platform అందించే విధానాన్ని బట్టి Assets,
+      Library లేదా historyలో చూడవచ్చు.
+    </p>
+
+    <h3>Important Concepts</h3>
+
+    <table>
+      <tr>
+        <th>Term</th>
+        <th>Meaning</th>
+      </tr>
+      <tr>
+        <td>Asset</td>
+        <td>A creative file or project resource.</td>
+      </tr>
+      <tr>
+        <td>Library</td>
+        <td>A place to organize or access saved content, if available.</td>
+      </tr>
+      <tr>
+        <td>Generation History</td>
+        <td>Records of previous generation activities, if supported.</td>
+      </tr>
+      <tr>
+        <td>Export</td>
+        <td>Saving or downloading a generated result.</td>
+      </tr>
+      <tr>
+        <td>Reference File</td>
+        <td>A file used as input for a creative task.</td>
+      </tr>
+    </table>
+
+    <h3>Asset Management Workflow</h3>
+
+    <ol>
+      <li>Generate a test image or video.</li>
+      <li>Check where the platform makes the result available.</li>
+      <li>Open the result and review its quality.</li>
+      <li>Use available download or export options.</li>
+      <li>Store important project files in an organized location.</li>
+      <li>Maintain separate folders for different projects.</li>
+    </ol>
+
+    <h3>Recommended Project Folder Structure</h3>
+
+    <div class="lesson-card">
+      <p><strong>AI-Projects/</strong></p>
+      <ul>
+        <li>Project-01/
+          <ul>
+            <li>Prompts/</li>
+            <li>References/</li>
+            <li>Images/</li>
+            <li>Videos/</li>
+            <li>Final-Exports/</li>
+          </ul>
+        </li>
+        <li>Project-02/</li>
+        <li>Practice-Projects/</li>
+      </ul>
+    </div>
+
+    <p>
+      Platform storage, retention and deletion policies may
+      vary. Do not assume that every generated file is
+      permanently stored or recoverable.
+    </p>
+
+  </section>
+
+
+  <!-- LESSON 07 -->
+
+  <section id="lesson-7">
+
+    <div class="lesson-label">LESSON 07</div>
+    <h2>Credits, Plans & Usage Information</h2>
+
+    <p class="english">
+      Many AI platforms use credits, subscriptions or
+      usage limits to control access to generation features.
+    </p>
+
+    <p class="telugu">
+      AI generationకు processing resources అవసరం. అందువల్ల
+      కొన్ని models లేదా tools ఉపయోగించినప్పుడు credits
+      లేదా usage limits వర్తించవచ్చు.
+    </p>
+
+    <h3>Important Terms</h3>
+
+    <table>
+      <tr>
+        <th>Term</th>
+        <th>Explanation</th>
+      </tr>
+      <tr>
+        <td>Credits</td>
+        <td>Usage units consumed by supported operations.</td>
+      </tr>
+      <tr>
+        <td>Subscription</td>
+        <td>A paid plan that provides defined access and benefits.</td>
+      </tr>
+      <tr>
+        <td>Usage Limit</td>
+        <td>A restriction on usage within a defined period or condition.</td>
+      </tr>
+      <tr>
+        <td>Generation Cost</td>
+        <td>The credits or resources required for a generation.</td>
+      </tr>
+      <tr>
+        <td>Unlimited Access</td>
+        <td>Access described as unlimited under specific plan conditions.</td>
+      </tr>
+      <tr>
+        <td>Billing Cycle</td>
+        <td>The period for which a subscription is billed.</td>
+      </tr>
+    </table>
+
+    <h3>Before Purchasing a Plan</h3>
+
+    <ul>
+      <li>Compare the available plans.</li>
+      <li>Read the credit allocation.</li>
+      <li>Check which models are included.</li>
+      <li>Understand any unlimited usage conditions.</li>
+      <li>Check generation queues or speed restrictions.</li>
+      <li>Review renewal and cancellation terms.</li>
+      <li>Check taxes and total payable amount.</li>
+      <li>Understand the applicable refund policy.</li>
+    </ul>
+
+    <div class="warning">
+      Do not assume that every model is unlimited just because
+      a plan advertises unlimited access to selected features.
+      Check the exact current plan conditions before payment.
+    </div>
+
+    <h3>Safe Credit Management</h3>
+
+    <ol>
+      <li>Start with a small test generation.</li>
+      <li>Check the displayed cost before generating.</li>
+      <li>Avoid repeated generations without reviewing results.</li>
+      <li>Use a clear prompt to reduce unnecessary attempts.</li>
+      <li>Track usage when the platform provides usage information.</li>
+    </ol>
+
+  </section>
+
+
+  <!-- LESSON 08 -->
+
+  <section id="lesson-8">
+
+    <div class="lesson-label">LESSON 08</div>
+    <h2>Account Settings & Troubleshooting</h2>
+
+    <p class="english">
+      Account settings allow users to manage available
+      preferences and account-related options.
+    </p>
+
+    <p class="telugu">
+      Settingsలో account‌కు సంబంధించిన preferences,
+      security, subscription లేదా ఇతర available options
+      ఉండవచ్చు. ఏ options కనిపిస్తాయో account మరియు
+      platform version‌ను బట్టి మారవచ్చు.
+    </p>
+
+    <h3>Settings to Review</h3>
+
+    <ul>
+      <li>Account information.</li>
+      <li>Authentication and security.</li>
+      <li>Subscription and billing information.</li>
+      <li>Available preferences.</li>
+      <li>Notifications, if supported.</li>
+      <li>Privacy and account controls.</li>
+    </ul>
+
+    <h3>Common Problems & Solutions</h3>
+
+    <table>
+      <tr>
+        <th>Problem</th>
+        <th>What to Check</th>
+      </tr>
+      <tr>
+        <td>Website not loading</td>
+        <td>Internet connection, browser and website status.</td>
+      </tr>
+      <tr>
+        <td>Login failure</td>
+        <td>Correct account and authentication method.</td>
+      </tr>
+      <tr>
+        <td>Verification issue</td>
+        <td>Verification instructions and email access.</td>
+      </tr>
+      <tr>
+        <td>Generation failure</td>
+        <td>Prompt, inputs, model availability and usage limits.</td>
+      </tr>
+      <tr>
+        <td>Slow generation</td>
+        <td>Queue, service status and connection.</td>
+      </tr>
+      <tr>
+        <td>Missing asset</td>
+        <td>Correct account, project and available history.</td>
+      </tr>
+      <tr>
+        <td>Unexpected credit usage</td>
+        <td>Generation details and displayed usage information.</td>
+      </tr>
+    </table>
+
+    <h3>Professional Troubleshooting Method</h3>
+
+    <ol>
+      <li>Identify the exact problem.</li>
+      <li>Record the action that caused the issue.</li>
+      <li>Check the error message.</li>
+      <li>Check platform status and documentation.</li>
+      <li>Try a safe basic troubleshooting step.</li>
+      <li>Contact official support if necessary.</li>
+    </ol>
+
+    <div class="warning">
+      Never share passwords, private account links,
+      payment details or verification codes when asking
+      for technical support in public communities.
+    </div>
+
+  </section>
+
+
+  <!-- PRACTICAL ASSIGNMENT -->
+
+  <section id="assignment">
+
+    <div class="lesson-label">PRACTICAL ASSIGNMENT</div>
+    <h2>Your First Higgsfield Workspace Tour</h2>
+
+    <div class="lesson-card">
+      <h3>Goal</h3>
+      <p>
+        Learn to navigate your account without spending
+        credits unnecessarily.
+      </p>
+
+      <h3>Tasks</h3>
+
+      <ol>
+        <li>Open the official Higgsfield website.</li>
+        <li>Sign in or create an account.</li>
+        <li>Find the main dashboard.</li>
+        <li>Identify image and video creation areas.</li>
+        <li>Find available model selection options.</li>
+        <li>Find the account or settings area.</li>
+        <li>Identify where credit or plan information appears.</li>
+        <li>Locate assets or previous generations if available.</li>
+      </ol>
+
+      <h3>Assignment Questions</h3>
+
+      <ol>
+        <li>Which sign-in method did you use?</li>
+        <li>What are the main navigation areas you found?</li>
+        <li>Where can you access image creation?</li>
+        <li>Where can you access video creation?</li>
+        <li>Where can you check your available usage information?</li>
+      </ol>
+    </div>
+
+  </section>
+
+
+  <!-- FINAL QUIZ -->
+
+  <section id="quiz">
+
+    <div class="lesson-label">KNOWLEDGE CHECK</div>
+    <h2>Module 02 — Final Quiz</h2>
+
+    <p>
+      Read each question and open the answer to verify
+      your understanding.
+    </p>
+
+    <details>
+      <summary>1. What is the purpose of Sign Up?</summary>
+      <p>To create a new account.</p>
+    </details>
+
+    <details>
+      <summary>2. What is Authentication?</summary>
+      <p>It is the process of verifying a user's access.</p>
+    </details>
+
+    <details>
+      <summary>3. What is a Dashboard?</summary>
+      <p>
+        It is the main workspace used to access platform
+        features and manage activities.
+      </p>
+    </details>
+
+    <details>
+      <summary>4. What is the difference between a Tool and a Model?</summary>
+      <p>
+        A tool provides a particular function, while a model
+        is the AI system that performs a generation or
+        processing task.
+      </p>
+    </details>
+
+    <details>
+      <summary>5. What are Assets?</summary>
+      <p>
+        Assets are creative files or resources associated
+        with projects.
+      </p>
+    </details>
+
+    <details>
+      <summary>6. What are Credits?</summary>
+      <p>
+        Credits are usage units that may be consumed by
+        supported platform operations.
+      </p>
+    </details>
+
+    <details>
+      <summary>7. Why should you check plan conditions before payment?</summary>
+      <p>
+        To understand model access, credit allocation,
+        restrictions, renewal and cancellation conditions.
+      </p>
+    </details>
+
+    <details>
+      <summary>8. What should you do if generation fails?</summary>
+      <p>
+        Check the error, prompt, inputs, model availability,
+        usage limits and platform status.
+      </p>
+    </details>
+
+    <details>
+      <summary>9. Why should you avoid sharing verification codes?</summary>
+      <p>
+        Verification codes can provide access to your account.
+        Sharing them can compromise account security.
+      </p>
+    </details>
+
+    <details>
+      <summary>10. Why can the dashboard look different in tutorials?</summary>
+      <p>
+        Platform interfaces change over time. Features can move,
+        be renamed or be updated.
+      </p>
+    </details>
+
+  </section>
+
+
+  <!-- COMPLETION -->
+
+  <section id="completion">
+
+    <div class="lesson-label">MODULE REVIEW</div>
+    <h2>Module 02 Completion Checklist</h2>
+
+    <div class="lesson-card">
+      <ul>
+        <li>Understand account registration.</li>
+        <li>Understand login and logout.</li>
+        <li>Know basic account security.</li>
+        <li>Understand dashboard navigation.</li>
+        <li>Understand tools, models and studios.</li>
+        <li>Understand assets and generation history.</li>
+        <li>Understand credits and subscription conditions.</li>
+        <li>Know basic troubleshooting steps.</li>
+        <li>Complete the workspace tour assignment.</li>
+        <li>Review all quiz answers.</li>
+      </ul>
+
+      <p>
+        Interactive quiz scoring, downloadable lesson notes,
+        tutorial videos and automatic course progress tracking
+        will be added in later development stages.
+      </p>
+    </div>
+
+  </section>
+
+
+  <footer class="lesson-footer">
+    <a href="../index.html">← Back to AI Creator School</a>
+
+    <p>AI Creator School · Learn. Create. Master.</p>
+
+    <p>Independent Telugu + English AI Education Platform.</p>
+  </footer>
+
+</main>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
