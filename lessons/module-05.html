@@ -1,0 +1,1525 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#080b14">
+
+  <meta name="description" content="Learn professional AI image generation in Telugu and English, including prompts, models, aspect ratios, reference images, editing and image quality control.">
+
+  <title>Module 05: AI Image Generation | AI Creator School</title>
+
+  <link rel="stylesheet" href="../style.css">
+
+  <style>
+    .lesson-page {
+      max-width: 1050px;
+      margin: auto;
+      padding: 35px 20px 80px;
+    }
+
+    .lesson-label {
+      color: #a78bfa;
+      font-size: 13px;
+      font-weight: 700;
+      letter-spacing: 2px;
+      text-transform: uppercase;
+    }
+
+    .lesson-page h1 {
+      font-size: clamp(30px, 5vw, 46px);
+      line-height: 1.2;
+      margin: 15px 0;
+    }
+
+    .lesson-page h2 {
+      font-size: 27px;
+      margin: 35px 0 15px;
+    }
+
+    .lesson-page h3 {
+      font-size: 19px;
+      margin: 24px 0 10px;
+    }
+
+    .lesson-page p,
+    .lesson-page li {
+      line-height: 1.85;
+    }
+
+    .lesson-card {
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 16px;
+      padding: 23px;
+      margin: 22px 0;
+    }
+
+    .lesson-page .telugu {
+      color: #e4e7f0;
+    }
+
+    .lesson-page .english {
+      color: #b7c2d8;
+    }
+
+    .lesson-page .term {
+      color: #c4b5fd;
+      font-weight: 700;
+    }
+
+    .lesson-page table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+
+    .lesson-page th,
+    .lesson-page td {
+      border: 1px solid rgba(255,255,255,.15);
+      padding: 12px;
+      text-align: left;
+      line-height: 1.6;
+    }
+
+    .lesson-page th {
+      background: rgba(139,92,246,.13);
+    }
+
+    .lesson-page details {
+      background: rgba(255,255,255,.045);
+      border: 1px solid rgba(255,255,255,.12);
+      border-radius: 12px;
+      padding: 16px;
+      margin: 12px 0;
+    }
+
+    .lesson-page summary {
+      cursor: pointer;
+      font-weight: 700;
+      line-height: 1.6;
+    }
+
+    .lesson-nav {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 25px 0;
+    }
+
+    .lesson-nav a,
+    .lesson-page .back-link {
+      display: inline-block;
+      border: 1px solid rgba(255,255,255,.15);
+      padding: 10px 14px;
+      border-radius: 9px;
+      text-decoration: none;
+    }
+
+    .lesson-page .prompt-box {
+      background: #050811;
+      border: 1px solid rgba(255,255,255,.13);
+      padding: 18px;
+      border-radius: 12px;
+      overflow-wrap: anywhere;
+      line-height: 1.85;
+      margin: 15px 0;
+    }
+
+    .lesson-page .example {
+      background: rgba(139,92,246,.09);
+      border-left: 4px solid #8b5cf6;
+      border-radius: 0 10px 10px 0;
+      padding: 16px;
+      margin: 18px 0;
+    }
+
+    .lesson-page .warning {
+      background: rgba(245,158,11,.08);
+      border-left: 4px solid #f59e0b;
+      border-radius: 0 10px 10px 0;
+      padding: 16px;
+      margin: 18px 0;
+    }
+
+    .lesson-footer {
+      border-top: 1px solid rgba(255,255,255,.15);
+      margin-top: 45px;
+      padding-top: 25px;
+    }
+
+    @media(max-width:600px) {
+      .lesson-page {
+        padding: 25px 15px 55px;
+      }
+
+      .lesson-card {
+        padding: 17px;
+      }
+
+      .lesson-page table {
+        font-size: 13px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+<main class="lesson-page">
+
+  <header>
+    <a class="back-link" href="../index.html">
+      ← Back to AI Creator School
+    </a>
+
+    <br><br>
+
+    <div class="lesson-label">MODULE 05 · BEGINNER TO PROFESSIONAL</div>
+
+    <h1>AI Image Generation</h1>
+
+    <p class="english">
+      Learn how to create, refine and manage professional
+      AI-generated images using prompts, models, references
+      and image-generation workflows.
+    </p>
+
+    <p class="telugu">
+      ఈ Module‌లో AIతో images ఎలా create చేయాలి, సరైన model
+      ఎలా ఎంచుకోవాలి, image settings ఎలా అర్థం చేసుకోవాలి,
+      reference images ఎలా ఉపయోగించాలి, వచ్చిన result‌ను
+      professional qualityకి ఎలా తీసుకెళ్లాలి అనేది నేర్చుకుంటారు.
+    </p>
+
+    <div class="lesson-card">
+      <h3>Learning Objectives</h3>
+      <ul>
+        <li>Understand text-to-image generation.</li>
+        <li>Understand image model selection.</li>
+        <li>Learn the complete image generation workflow.</li>
+        <li>Understand aspect ratios and resolutions.</li>
+        <li>Learn reference-image workflows.</li>
+        <li>Understand image variations and regeneration.</li>
+        <li>Learn portrait, product, landscape and concept-art creation.</li>
+        <li>Understand image editing and refinement.</li>
+        <li>Learn image quality control and export.</li>
+        <li>Complete professional image-generation projects.</li>
+      </ul>
+    </div>
+
+    <nav class="lesson-nav" aria-label="Module lessons">
+      <a href="#lesson-1">Lesson 01</a>
+      <a href="#lesson-2">Lesson 02</a>
+      <a href="#lesson-3">Lesson 03</a>
+      <a href="#lesson-4">Lesson 04</a>
+      <a href="#lesson-5">Lesson 05</a>
+      <a href="#lesson-6">Lesson 06</a>
+      <a href="#lesson-7">Lesson 07</a>
+      <a href="#lesson-8">Lesson 08</a>
+      <a href="#lesson-9">Lesson 09</a>
+      <a href="#lesson-10">Lesson 10</a>
+      <a href="#lesson-11">Lesson 11</a>
+      <a href="#quiz">Quiz</a>
+    </nav>
+  </header>
+
+
+  <!-- LESSON 01 -->
+
+  <section id="lesson-1">
+
+    <div class="lesson-label">LESSON 01</div>
+    <h2>Introduction to AI Image Generation</h2>
+
+    <p class="english">
+      AI image generation is the process of creating visual
+      content using an AI model based on text prompts,
+      reference images or other supported inputs.
+    </p>
+
+    <p class="telugu">
+      AI Image Generation అంటే మనం ఇచ్చే text prompt,
+      reference image లేదా supported inputs ఆధారంగా
+      AI కొత్త image తయారు చేసే ప్రక్రియ.
+    </p>
+
+    <h3>Different Image Generation Methods</h3>
+
+    <div class="lesson-card">
+      <h3>1. Text-to-Image (T2I)</h3>
+      <p>
+        Create an image from a written description.
+      </p>
+      <p>
+        ఉదాహరణకు: "A futuristic city at sunset" అని prompt
+        ఇస్తే AI ఆ description ఆధారంగా image generate చేస్తుంది.
+      </p>
+
+      <h3>2. Image-to-Image (I2I)</h3>
+      <p>
+        Use an existing image as the starting point or visual
+        reference for a new image.
+      </p>
+      <p>
+        ఒక existing image‌ను inputగా ఇచ్చి దాని ఆధారంగా
+        కొత్త visual result పొందవచ్చు. Exact behavior
+        selected model మరియు tool‌పై ఆధారపడి ఉంటుంది.
+      </p>
+
+      <h3>3. Image Editing</h3>
+      <p>
+        Modify selected parts or characteristics of an
+        existing image using supported editing features.
+      </p>
+
+      <h3>4. Inpainting</h3>
+      <p>
+        Modify or replace a selected region inside an image.
+      </p>
+
+      <h3>5. Outpainting</h3>
+      <p>
+        Extend an image beyond its original boundaries,
+        where supported.
+      </p>
+
+      <h3>6. Image Variation</h3>
+      <p>
+        Generate alternative versions based on an existing
+        image or generation result.
+      </p>
+    </div>
+
+    <h3>Where Can AI Images Be Used?</h3>
+
+    <ul>
+      <li>Social media posts and thumbnails.</li>
+      <li>Product advertisements.</li>
+      <li>Character and costume concepts.</li>
+      <li>Movie pre-production and story concepts.</li>
+      <li>Fashion and editorial concepts.</li>
+      <li>Website and marketing graphics.</li>
+      <li>Fantasy worlds and environment concepts.</li>
+      <li>Educational illustrations.</li>
+    </ul>
+
+    <div class="warning">
+      AI-generated images may contain incorrect details,
+      inconsistent anatomy, inaccurate text or visual artifacts.
+      Always review important outputs before publishing.
+    </div>
+
+  </section>
+
+
+  <!-- LESSON 02 -->
+
+  <section id="lesson-2">
+
+    <div class="lesson-label">LESSON 02</div>
+    <h2>Understanding AI Image Models</h2>
+
+    <p class="english">
+      An image model is a trained AI system that generates
+      or processes images. Different models can produce
+      different visual styles and levels of control.
+    </p>
+
+    <p class="telugu">
+      Image Model అనేది image create చేయడానికి లేదా
+      process చేయడానికి ఉపయోగించే AI system. అన్ని
+      models ఒకే విధంగా పనిచేయవు. వాటి strengths,
+      controls మరియు output quality వేర్వేరుగా ఉండవచ్చు.
+    </p>
+
+    <h3>What to Compare When Selecting a Model</h3>
+
+    <table>
+      <tr>
+        <th>Factor</th>
+        <th>What to Check</th>
+      </tr>
+      <tr>
+        <td>Photorealism</td>
+        <td>How naturally does it render realistic scenes?</td>
+      </tr>
+      <tr>
+        <td>Prompt Following</td>
+        <td>How well does it follow detailed instructions?</td>
+      </tr>
+      <tr>
+        <td>Text Rendering</td>
+        <td>Can it create readable text inside images?</td>
+      </tr>
+      <tr>
+        <td>Reference Support</td>
+        <td>Can it use uploaded reference images?</td>
+      </tr>
+      <tr>
+        <td>Editing</td>
+        <td>Does it support image editing or regional changes?</td>
+      </tr>
+      <tr>
+        <td>Resolution</td>
+        <td>What output dimensions are available?</td>
+      </tr>
+      <tr>
+        <td>Speed</td>
+        <td>How long does generation take?</td>
+      </tr>
+      <tr>
+        <td>Cost</td>
+        <td>How many credits are required?</td>
+      </tr>
+    </table>
+
+    <h3>Image Model Families to Study</h3>
+
+    <p>
+      Higgsfield may offer models from different providers.
+      The model inventory can change over time.
+    </p>
+
+    <ul>
+      <li>FLUX family.</li>
+      <li>Google image-generation models such as Nano Banana.</li>
+      <li>OpenAI image-generation models.</li>
+      <li>Ideogram models.</li>
+      <li>Seedream models.</li>
+      <li>Other models currently available in the platform.</li>
+    </ul>
+
+    <h3>How to Select the Right Model</h3>
+
+    <ol>
+      <li>Identify the type of image you need.</li>
+      <li>Check which models support that task.</li>
+      <li>Review model-specific examples and instructions.</li>
+      <li>Check reference and editing capabilities.</li>
+      <li>Check aspect ratio and resolution options.</li>
+      <li>Check generation cost.</li>
+      <li>Test with a small prompt before a large project.</li>
+    </ol>
+
+    <div class="warning">
+      These model families are examples for study, not a
+      guarantee that every model is currently available in
+      every Higgsfield plan or region. Verify the current
+      model selector and official model documentation.
+    </div>
+
+  </section>
+
+
+  <!-- LESSON 03 -->
+
+  <section id="lesson-3">
+
+    <div class="lesson-label">LESSON 03</div>
+    <h2>Complete Text-to-Image Workflow</h2>
+
+    <p class="english">
+      Text-to-image generation transforms a written
+      description into a visual result.
+    </p>
+
+    <p class="telugu">
+      Text-to-Imageలో మనం prompt రాస్తాం. AI model ఆ prompt
+      ఆధారంగా image generate చేస్తుంది. Prompt నుంచి final
+      export వరకు ఈ workflow‌ను అర్థం చేసుకోవాలి.
+    </p>
+
+    <h3>Step-by-Step Workflow</h3>
+
+    <div class="lesson-card">
+      <p><strong>Step 01 — Define the Idea</strong></p>
+      <p>
+        ఏ image కావాలో ముందుగా నిర్ణయించండి.
+        Example: A cinematic mountain landscape.
+      </p>
+
+      <p><strong>Step 02 — Select the Image Tool</strong></p>
+      <p>
+        Platformలో ప్రస్తుతం అందుబాటులో ఉన్న image-generation
+        workflow‌ను open చేయండి.
+      </p>
+
+      <p><strong>Step 03 — Select the Model</strong></p>
+      <p>
+        Project‌కు సరిపోయే model‌ను ఎంచుకోండి.
+      </p>
+
+      <p><strong>Step 04 — Write the Prompt</strong></p>
+      <p>
+        Subject, environment, composition, lighting మరియు
+        visual style వివరించండి.
+      </p>
+
+      <p><strong>Step 05 — Select Settings</strong></p>
+      <p>
+        Available aspect ratio, resolution, image count
+        మరియు ఇతర controls‌ను పరిశీలించండి.
+      </p>
+
+      <p><strong>Step 06 — Check Cost</strong></p>
+      <p>
+        Generationకు ముందు displayed credit cost‌ను
+        పరిశీలించండి.
+      </p>
+
+      <p><strong>Step 07 — Generate</strong></p>
+      <p>
+        Generate action ద్వారా image creation ప్రారంభించండి.
+      </p>
+
+      <p><strong>Step 08 — Review</strong></p>
+      <p>
+        Composition, subject details, lighting, anatomy
+        మరియు prompt accuracy పరిశీలించండి.
+      </p>
+
+      <p><strong>Step 09 — Refine</strong></p>
+      <p>
+        అవసరమైతే prompt‌ను improve చేయండి లేదా supported
+        editing workflow ఉపయోగించండి.
+      </p>
+
+      <p><strong>Step 10 — Export</strong></p>
+      <p>
+        Final image‌ను available download లేదా export
+        option ద్వారా save చేయండి.
+      </p>
+    </div>
+
+    <h3>First Practice Prompt</h3>
+
+    <div class="prompt-box">
+      A beautiful traditional Indian village at sunrise,
+      green fields, distant hills, small houses,
+      warm golden sunlight, natural atmosphere,
+      cinematic landscape photography, wide composition,
+      realistic environmental details.
+    </div>
+
+    <h3>Output Review Questions</h3>
+
+    <ul>
+      <li>Is the village clearly visible?</li>
+      <li>Are the buildings natural and coherent?</li>
+      <li>Is the lighting consistent with sunrise?</li>
+      <li>Does the image have the intended composition?</li>
+      <li>Are there unwanted objects or visual artifacts?</li>
+    </ul>
+
+  </section>
+
+
+  <!-- LESSON 04 -->
+
+  <section id="lesson-4">
+
+    <div class="lesson-label">LESSON 04</div>
+    <h2>Aspect Ratio, Dimensions & Resolution</h2>
+
+    <p class="english">
+      Aspect ratio describes the proportional relationship
+      between image width and height. Resolution describes
+      the number of pixels in the image.
+    </p>
+
+    <p class="telugu">
+      Aspect Ratio అంటే image width మరియు height మధ్య
+      నిష్పత్తి. Resolution అంటే imageలో ఉన్న pixels
+      పరిమాణం. ఇవి రెండూ వేర్వేరు విషయాలు.
+    </p>
+
+    <h3>Common Aspect Ratios</h3>
+
+    <table>
+      <tr>
+        <th>Ratio</th>
+        <th>Orientation</th>
+        <th>Typical Use</th>
+      </tr>
+      <tr>
+        <td>1:1</td>
+        <td>Square</td>
+        <td>Square posts and product concepts.</td>
+      </tr>
+      <tr>
+        <td>4:5</td>
+        <td>Portrait</td>
+        <td>Portrait social media images.</td>
+      </tr>
+      <tr>
+        <td>3:2</td>
+        <td>Landscape</td>
+        <td>Photography-style compositions.</td>
+      </tr>
+      <tr>
+        <td>4:3</td>
+        <td>Landscape</td>
+        <td>Traditional display formats.</td>
+      </tr>
+      <tr>
+        <td>16:9</td>
+        <td>Landscape</td>
+        <td>Video thumbnails and widescreen visuals.</td>
+      </tr>
+      <tr>
+        <td>9:16</td>
+        <td>Portrait</td>
+        <td>Vertical content and story formats.</td>
+      </tr>
+      <tr>
+        <td>21:9</td>
+        <td>Ultra-wide</td>
+        <td>Wide cinematic compositions.</td>
+      </tr>
+    </table>
+
+    <h3>Understanding Resolution</h3>
+
+    <table>
+      <tr>
+        <th>Resolution Example</th>
+        <th>Pixel Dimensions</th>
+      </tr>
+      <tr>
+        <td>HD</td>
+        <td>1280 × 720</td>
+      </tr>
+      <tr>
+        <td>Full HD</td>
+        <td>1920 × 1080</td>
+      </tr>
+      <tr>
+        <td>QHD</td>
+        <td>2560 × 1440</td>
+      </tr>
+      <tr>
+        <td>UHD / 4K</td>
+        <td>3840 × 2160</td>
+      </tr>
+    </table>
+
+    <p>
+      These are common display resolutions. An image-generation
+      model may provide different dimensions or aspect ratios.
+    </p>
+
+    <h3>How to Choose the Right Ratio</h3>
+
+    <ul>
+      <li>Portrait campaign artwork — consider 4:5.</li>
+      <li>Vertical story artwork — consider 9:16.</li>
+      <li>Widescreen environment concept — consider 16:9.</li>
+      <li>Square product composition — consider 1:1.</li>
+      <li>Wide cinematic concept — consider 21:9 if supported.</li>
+    </ul>
+
+    <div class="warning">
+      A 4K video resolution and a 4K image resolution are
+      not interchangeable just because their pixel dimensions
+      may be similar. Check the actual output dimensions,
+      format and use case.
+    </div>
+
+  </section>
+
+
+  <!-- LESSON 05 -->
+
+  <section id="lesson-5">
+
+    <div class="lesson-label">LESSON 05</div>
+    <h2>Reference Images & Image Guidance</h2>
+
+    <p class="english">
+      Reference images provide visual guidance to an AI
+      generation process. Depending on the tool, references
+      may guide identity, style, composition, color or subject.
+    </p>
+
+    <p class="telugu">
+      Reference Image అంటే AIకి ఒక visual example ఇవ్వడం.
+      దాని ఆధారంగా మనం కోరుకున్న visual direction‌ను
+      guide చేయవచ్చు. అయితే ప్రతి model reference‌ను
+      ఒకే విధంగా ఉపయోగించదు.
+    </p>
+
+    <h3>Different Reference Purposes</h3>
+
+    <div class="lesson-card">
+      <h3>1. Subject Reference</h3>
+      <p>
+        A reference that guides the appearance of the main
+        person, object or character.
+      </p>
+
+      <h3>2. Style Reference</h3>
+      <p>
+        A reference used to guide artistic or visual style.
+      </p>
+
+      <h3>3. Composition Reference</h3>
+      <p>
+        A reference that helps guide layout and subject placement.
+      </p>
+
+      <h3>4. Color Reference</h3>
+      <p>
+        A reference used to guide the color palette.
+      </p>
+
+      <h3>5. Environment Reference</h3>
+      <p>
+        A reference that guides the appearance of a location
+        or surrounding environment.
+      </p>
+    </div>
+
+    <h3>Reference Image Workflow</h3>
+
+    <ol>
+      <li>Choose an image you have the right to use.</li>
+      <li>Identify what should be preserved.</li>
+      <li>Identify what should change.</li>
+      <li>Open a tool that supports reference images.</li>
+      <li>Upload the reference.</li>
+      <li>Choose the supported reference type or control.</li>
+      <li>Write a prompt describing the intended result.</li>
+      <li>Generate and review the output.</li>
+    </ol>
+
+    <h3>Example: Preserve a Product, Change Its Environment</h3>
+
+    <div class="prompt-box">
+      Use the supplied product reference as visual guidance.
+      Keep the product's overall design and recognizable
+      appearance consistent. Place it in a premium modern
+      studio with a dark reflective surface, controlled
+      soft lighting and elegant commercial composition.
+    </div>
+
+    <h3>Example: Style Reference</h3>
+
+    <div class="prompt-box">
+      Create an original fantasy landscape using the supplied
+      reference as broad visual guidance for atmosphere,
+      color palette and lighting. Design a different
+      environment with unique architecture and composition.
+    </div>
+
+    <div class="warning">
+      Reference images do not guarantee exact preservation.
+      Check whether the selected model supports the type of
+      reference control you need. Respect image ownership,
+      privacy and consent.
+    </div>
+
+  </section>
+
+
+  <!-- LESSON 06 -->
+
+  <section id="lesson-6">
+
+    <div class="lesson-label">LESSON 06</div>
+    <h2>Image Variations, Seeds & Regeneration</h2>
+
+    <p class="english">
+      Image variations allow creators to explore different
+      interpretations of a visual concept. Regeneration
+      creates another output using the selected workflow.
+    </p>
+
+    <p class="telugu">
+      ఒక prompt‌తో వచ్చిన image నచ్చకపోతే లేదా ఇంకొన్ని
+      design options కావాలంటే variations లేదా regeneration
+      ఉపయోగించవచ్చు. Supported modelsలో seed control కూడా
+      ఉండవచ్చు.
+    </p>
+
+    <h3>Important Concepts</h3>
+
+    <table>
+      <tr>
+        <th>Term</th>
+        <th>Meaning</th>
+      </tr>
+      <tr>
+        <td>Variation</td>
+        <td>An alternative version of a visual result.</td>
+      </tr>
+      <tr>
+        <td>Regeneration</td>
+        <td>Generate a new result using a selected workflow.</td>
+      </tr>
+      <tr>
+        <td>Seed</td>
+        <td>A value used in some systems to control random initialization.</td>
+      </tr>
+      <tr>
+        <td>Batch Generation</td>
+        <td>Generate multiple outputs in one operation, if supported.</td>
+      </tr>
+      <tr>
+        <td>Iteration</td>
+        <td>Repeated improvement through testing and refinement.</td>
+      </tr>
+    </table>
+
+    <h3>Understanding Seed</h3>
+
+    <p>
+      A seed can influence the starting randomness of a
+      generation process. In some systems, using the same
+      seed with the same settings can produce similar or
+      repeatable results.
+    </p>
+
+    <p>
+      However, exact reproducibility is not guaranteed
+      across model versions, settings or platform changes.
+    </p>
+
+    <h3>Variation Workflow</h3>
+
+    <ol>
+      <li>Generate an initial image.</li>
+      <li>Review the result.</li>
+      <li>Identify what you want to preserve.</li>
+      <li>Identify what you want to change.</li>
+      <li>Use a variation or editing feature where supported.</li>
+      <li>Compare the new result with the original.</li>
+      <li>Save the strongest result.</li>
+    </ol>
+
+    <h3>Professional Tip</h3>
+
+    <p>
+      Do not generate many random variations without a clear
+      objective. Decide whether you are changing composition,
+      lighting, color, style or subject appearance.
+    </p>
+
+  </section>
+
+
+  <!-- LESSON 07 -->
+
+  <section id="lesson-7">
+
+    <div class="lesson-label">LESSON 07</div>
+    <h2>Professional Portrait & Character Images</h2>
+
+    <p class="english">
+      Portrait generation focuses on faces, expressions,
+      poses, clothing, lighting and background composition.
+    </p>
+
+    <p class="telugu">
+      Portrait image create చేయడానికి face మాత్రమే కాదు.
+      Expression, pose, clothing, hairstyle, lighting,
+      camera framing మరియు background కూడా ముఖ్యమైనవి.
+    </p>
+
+    <h3>Portrait Prompt Structure</h3>
+
+    <div class="prompt-box">
+      Subject + Facial Appearance + Expression + Pose
+      + Clothing + Background + Shot Type
+      + Lighting + Photography Style
+    </div>
+
+    <h3>Example 01 — Professional Headshot</h3>
+
+    <div class="prompt-box">
+      A professional studio headshot of an adult Indian
+      business professional, wearing a clean dark formal
+      blazer, natural friendly expression, shoulders-up
+      framing, neutral studio background, soft key light,
+      subtle fill light, realistic skin texture,
+      professional corporate portrait photography.
+    </div>
+
+    <h3>Example 02 — Cinematic Character Portrait</h3>
+
+    <div class="prompt-box">
+      A fictional young explorer standing in a misty
+      forest, wearing a weathered adventure jacket,
+      thoughtful expression, medium close-up portrait,
+      soft directional lighting, natural skin texture,
+      cinematic atmosphere, realistic photography style.
+    </div>
+
+    <h3>Example 03 — Fashion Portrait</h3>
+
+    <div class="prompt-box">
+      A fashion editorial portrait of an adult model
+      wearing a contemporary monochromatic outfit,
+      elegant standing pose, modern architectural
+      background, dramatic studio lighting,
+      clean fashion composition, professional
+      magazine photography style.
+    </div>
+
+    <h3>Portrait Quality Checklist</h3>
+
+    <ul>
+      <li>Check facial proportions.</li>
+      <li>Check eyes and expression.</li>
+      <li>Check hands and fingers if visible.</li>
+      <li>Check hair and clothing details.</li>
+      <li>Check background consistency.</li>
+      <li>Check whether lighting is natural.</li>
+      <li>Check for duplicated or distorted details.</li>
+    </ul>
+
+    <p>
+      Character identity consistency across different images
+      may require reference features or specialized tools.
+      A text description alone may not preserve an exact face.
+    </p>
+
+  </section>
+
+
+  <!-- LESSON 08 -->
+
+  <section id="lesson-8">
+
+    <div class="lesson-label">LESSON 08</div>
+    <h2>Product Photography & Advertisement Images</h2>
+
+    <p class="english">
+      AI product images are used to develop advertising
+      concepts, product presentations and marketing visuals.
+    </p>
+
+    <p class="telugu">
+      Product photographyలో product ఆకారం, material,
+      color, lighting మరియు composition ముఖ్యమైనవి.
+      AIతో advertisement concepts రూపొందించవచ్చు.
+    </p>
+
+    <h3>Product Image Prompt Structure</h3>
+
+    <div class="prompt-box">
+      Product + Shape + Material + Position
+      + Background + Lighting + Camera Angle
+      + Reflections + Advertising Style
+    </div>
+
+    <h3>Example 01 — Perfume Advertisement</h3>
+
+    <div class="prompt-box">
+      A luxury perfume bottle made of clear glass with
+      a dark metallic cap, standing on a polished black
+      stone surface, elegant dark studio environment,
+      soft rim lighting, controlled reflections,
+      premium commercial product photography,
+      centered composition, high detail.
+    </div>
+
+    <h3>Example 02 — Smartphone Advertisement</h3>
+
+    <div class="prompt-box">
+      A modern premium smartphone displayed at a three-quarter
+      angle, slim metallic body, clean reflective surface,
+      minimalist futuristic studio, subtle blue lighting,
+      premium technology advertisement, sharp product focus,
+      balanced composition.
+    </div>
+
+    <h3>Example 03 — Food Advertisement</h3>
+
+    <div class="prompt-box">
+      A beautifully arranged traditional Indian thali
+      served on a handcrafted plate, fresh ingredients,
+      natural food textures, warm restaurant lighting,
+      overhead food photography, appetizing presentation,
+      professional food advertisement.
+    </div>
+
+    <h3>Important Product Accuracy Rules</h3>
+
+    <ul>
+      <li>Use a real product reference when accurate design matters.</li>
+      <li>Check logo and brand details carefully.</li>
+      <li>Check product proportions and geometry.</li>
+      <li>Do not trust AI-generated text or packaging labels blindly.</li>
+      <li>Review colors and material appearance.</li>
+      <li>Use actual product photography when exact accuracy is required.</li>
+    </ul>
+
+  </section>
+
+
+  <!-- LESSON 09 -->
+
+  <section id="lesson-9">
+
+    <div class="lesson-label">LESSON 09</div>
+    <h2>Landscape, Architecture & Concept Art</h2>
+
+    <p class="english">
+      Environment image generation focuses on locations,
+      architecture, landscapes, atmosphere and spatial design.
+    </p>
+
+    <p class="telugu">
+      Movie environments, futuristic cities, temples,
+      mountains, forests మరియు imaginary worlds వంటి
+      visuals తయారు చేయడానికి environment prompts ఉపయోగపడతాయి.
+    </p>
+
+    <h3>Environment Prompt Structure</h3>
+
+    <div class="prompt-box">
+      Location + Architecture + Scale + Environment
+      + Weather + Lighting + Perspective
+      + Atmosphere + Visual Style
+    </div>
+
+    <h3>Example 01 — Futuristic City</h3>
+
+    <div class="prompt-box">
+      A vast futuristic Indian megacity with advanced
+      architecture, elevated transportation systems,
+      green public spaces, modern skyscrapers,
+      golden sunset, atmospheric depth,
+      wide cinematic establishing shot,
+      realistic environment concept art.
+    </div>
+
+    <h3>Example 02 — Ancient Temple</h3>
+
+    <div class="prompt-box">
+      An ancient South Indian stone temple surrounded
+      by lush green forest, intricate traditional
+      architecture, weathered stone details, early
+      morning mist, soft sunlight, wide environmental
+      composition, historical visual concept art.
+    </div>
+
+    <h3>Example 03 — Fantasy Kingdom</h3>
+
+    <div class="prompt-box">
+      A magnificent fantasy kingdom built across
+      enormous mountain cliffs, waterfalls flowing
+      through stone bridges, distant towers,
+      dramatic cloud formations, atmospheric perspective,
+      epic fantasy environment concept art.
+    </div>
+
+    <h3>Environment Quality Checklist</h3>
+
+    <ul>
+      <li>Check architectural consistency.</li>
+      <li>Check perspective and scale.</li>
+      <li>Check shadows and light direction.</li>
+      <li>Check repeated structures.</li>
+      <li>Check foreground and background separation.</li>
+      <li>Check whether the atmosphere matches the concept.</li>
+    </ul>
+
+  </section>
+
+
+  <!-- LESSON 10 -->
+
+  <section id="lesson-10">
+
+    <div class="lesson-label">LESSON 10</div>
+    <h2>Image Editing, Inpainting & Outpainting</h2>
+
+    <p class="english">
+      Image editing workflows modify existing images.
+      Different tools may provide masking, region editing,
+      background replacement, object removal or image extension.
+    </p>
+
+    <p class="telugu">
+      ఇప్పటికే ఉన్న image‌లో కొన్ని భాగాలు మార్చడం,
+      unwanted objects తొలగించడం, background మార్చడం,
+      image canvas‌ను extend చేయడం వంటి పనులు editing
+      workflows ద్వారా చేయవచ్చు.
+    </p>
+
+    <h3>1. Inpainting</h3>
+
+    <p>
+      Inpainting changes a selected region inside an image.
+      A mask is often used to identify the area to modify.
+    </p>
+
+    <p><strong>Example:</strong> Change the color of a selected chair.</p>
+
+    <h3>2. Outpainting</h3>
+
+    <p>
+      Outpainting extends an image beyond its original
+      boundaries by generating additional surrounding content.
+    </p>
+
+    <p><strong>Example:</strong> Expand a portrait into a wider landscape.</p>
+
+    <h3>3. Background Replacement</h3>
+
+    <p>
+      Replace the existing background while attempting
+      to preserve the main subject.
+    </p>
+
+    <h3>4. Object Removal</h3>
+
+    <p>
+      Remove an unwanted object and reconstruct the
+      surrounding area where supported.
+    </p>
+
+    <h3>5. Image Expansion</h3>
+
+    <p>
+      Extend the canvas to create additional composition space.
+    </p>
+
+    <h3>Masking Basics</h3>
+
+    <table>
+      <tr>
+        <th>Term</th>
+        <th>Meaning</th>
+      </tr>
+      <tr>
+        <td>Mask</td>
+        <td>Defines a region for editing.</td>
+      </tr>
+      <tr>
+        <td>Brush</td>
+        <td>Tool used to paint or mark a region.</td>
+      </tr>
+      <tr>
+        <td>Feather</td>
+        <td>Softens the boundary of a selection.</td>
+      </tr>
+      <tr>
+        <td>Selection</td>
+        <td>Identifies an area to work on.</td>
+      </tr>
+      <tr>
+        <td>Inpaint Region</td>
+        <td>The area intended for replacement or modification.</td>
+      </tr>
+    </table>
+
+    <h3>Editing Prompt Example</h3>
+
+    <div class="prompt-box">
+      Replace the selected background with a modern
+      minimalist studio. Preserve the main subject's
+      overall appearance, pose and clothing.
+      Match the lighting direction and perspective
+      with the original subject.
+    </div>
+
+    <div class="warning">
+      Editing tools may alter areas outside the selection
+      or change details that were intended to remain.
+      Always compare the edited result with the original.
+    </div>
+
+  </section>
+
+
+  <!-- LESSON 11 -->
+
+  <section id="lesson-11">
+
+    <div class="lesson-label">LESSON 11</div>
+    <h2>Upscaling, Image Quality & Export</h2>
+
+    <p class="english">
+      Image upscaling increases image dimensions and may
+      enhance perceived detail. Quality control checks
+      whether the final image is suitable for its intended use.
+    </p>
+
+    <p class="telugu">
+      Image upscaling ద్వారా image dimensions పెంచవచ్చు.
+      కొన్ని upscalers అదనపు detail కూడా generate చేస్తాయి.
+      కానీ upscaling వల్ల original image‌లో లేని నిజమైన
+      details తిరిగి వస్తాయని హామీ లేదు.
+    </p>
+
+    <h3>Important Image Quality Terms</h3>
+
+    <table>
+      <tr>
+        <th>Term</th>
+        <th>Meaning</th>
+      </tr>
+      <tr>
+        <td>Upscaling</td>
+        <td>Increasing image dimensions using a scaling process.</td>
+      </tr>
+      <tr>
+        <td>Sharpening</td>
+        <td>Enhancing the appearance of edges and detail.</td>
+      </tr>
+      <tr>
+        <td>Denoising</td>
+        <td>Reducing unwanted visual noise.</td>
+      </tr>
+      <tr>
+        <td>Compression</td>
+        <td>Reducing file size, potentially affecting quality.</td>
+      </tr>
+      <tr>
+        <td>Artifact</td>
+        <td>An unwanted visual defect.</td>
+      </tr>
+      <tr>
+        <td>Color Banding</td>
+        <td>Visible bands in areas that should have smooth gradients.</td>
+      </tr>
+      <tr>
+        <td>Color Grading</td>
+        <td>Adjusting the overall visual color appearance.</td>
+      </tr>
+    </table>
+
+    <h3>Common Export Formats</h3>
+
+    <table>
+      <tr>
+        <th>Format</th>
+        <th>Typical Use</th>
+      </tr>
+      <tr>
+        <td>JPEG / JPG</td>
+        <td>Photographic images and web delivery.</td>
+      </tr>
+      <tr>
+        <td>PNG</td>
+        <td>Graphics and transparency where supported.</td>
+      </tr>
+      <tr>
+        <td>WebP</td>
+        <td>Efficient web image delivery.</td>
+      </tr>
+      <tr>
+        <td>TIFF</td>
+        <td>Professional image workflows where supported.</td>
+      </tr>
+    </table>
+
+    <h3>Final Quality-Control Checklist</h3>
+
+    <ul>
+      <li>Check faces, eyes and hands.</li>
+      <li>Check text and logos.</li>
+      <li>Check object proportions.</li>
+      <li>Check unwanted duplicated objects.</li>
+      <li>Check lighting and shadows.</li>
+      <li>Check image dimensions.</li>
+      <li>Check file format.</li>
+      <li>Check color and contrast.</li>
+      <li>Check licensing and usage requirements.</li>
+    </ul>
+
+    <h3>File Organization</h3>
+
+    <div class="lesson-card">
+      <p><strong>Image-Project/</strong></p>
+      <ul>
+        <li>References/</li>
+        <li>Prompts/</li>
+        <li>First-Generations/</li>
+        <li>Edited-Images/</li>
+        <li>Upscaled-Images/</li>
+        <li>Final-Exports/</li>
+      </ul>
+    </div>
+
+  </section>
+
+
+  <!-- PRACTICAL PROJECTS -->
+
+  <section id="assignment">
+
+    <div class="lesson-label">PROFESSIONAL PRACTICE</div>
+    <h2>Module 05 — Image Generation Projects</h2>
+
+    <div class="lesson-card">
+
+      <h3>Project 01 — Cinematic Portrait</h3>
+
+      <p><strong>Goal:</strong> Create a professional character portrait.</p>
+
+      <div class="prompt-box">
+        A fictional adult Indian explorer standing in a
+        misty mountain environment, practical outdoor clothing,
+        medium close-up portrait, natural expression,
+        soft cinematic side lighting, realistic skin texture,
+        atmospheric background, professional portrait photography.
+      </div>
+
+      <p><strong>Skills:</strong> Portrait composition, lighting and subject details.</p>
+
+      <h3>Project 02 — Luxury Product Image</h3>
+
+      <p><strong>Goal:</strong> Create a premium commercial product visual.</p>
+
+      <div class="prompt-box">
+        A luxury wristwatch displayed on a polished dark
+        stone platform, elegant metallic details, controlled
+        studio lighting, refined reflections, close-up
+        commercial product photography, premium visual style.
+      </div>
+
+      <p><strong>Skills:</strong> Product lighting, materials and composition.</p>
+
+      <h3>Project 03 — Futuristic City</h3>
+
+      <p><strong>Goal:</strong> Design an original futuristic environment.</p>
+
+      <div class="prompt-box">
+        A vast futuristic Indian city with advanced buildings,
+        green public spaces and elevated transportation,
+        sunrise lighting, atmospheric depth, wide-angle
+        cinematic establishing shot, realistic environment
+        concept art.
+      </div>
+
+      <p><strong>Skills:</strong> Environment design and visual storytelling.</p>
+
+      <h3>Project 04 — Product Background Editing</h3>
+
+      <p><strong>Goal:</strong> Change the background of a product image.</p>
+
+      <p>
+        Use a reference image you have permission to edit.
+        Use an appropriate supported editing workflow and
+        describe the new environment clearly.
+      </p>
+
+      <p><strong>Skills:</strong> Reference images and image editing.</p>
+
+      <h3>Project 05 — Image Variation Study</h3>
+
+      <p><strong>Goal:</strong> Create different versions of one concept.</p>
+
+      <ol>
+        <li>Create one initial image.</li>
+        <li>Create a warm-lighting variation.</li>
+        <li>Create a cool-lighting variation.</li>
+        <li>Create a different composition.</li>
+        <li>Compare all results.</li>
+        <li>Select the best version and explain why.</li>
+      </ol>
+
+      <p><strong>Skills:</strong> Iteration, variation and quality control.</p>
+
+    </div>
+
+  </section>
+
+
+  <!-- FINAL QUIZ -->
+
+  <section id="quiz">
+
+    <div class="lesson-label">KNOWLEDGE CHECK</div>
+    <h2>Module 05 — Final Quiz</h2>
+
+    <details>
+      <summary>1. What is Text-to-Image generation?</summary>
+      <p>
+        Creating an image from a written description
+        using an AI model.
+      </p>
+    </details>
+
+    <details>
+      <summary>2. What is Image-to-Image generation?</summary>
+      <p>
+        Using an existing image as a starting point or
+        reference for a new image.
+      </p>
+    </details>
+
+    <details>
+      <summary>3. What is a Reference Image?</summary>
+      <p>
+        A visual input used to guide a generation process
+        in a supported workflow.
+      </p>
+    </details>
+
+    <details>
+      <summary>4. What is Aspect Ratio?</summary>
+      <p>
+        The proportional relationship between image width
+        and image height.
+      </p>
+    </details>
+
+    <details>
+      <summary>5. What is Resolution?</summary>
+      <p>
+        The number of pixels in an image, commonly expressed
+        as width × height.
+      </p>
+    </details>
+
+    <details>
+      <summary>6. What is Inpainting?</summary>
+      <p>
+        Modifying or replacing a selected region inside
+        an image.
+      </p>
+    </details>
+
+    <details>
+      <summary>7. What is Outpainting?</summary>
+      <p>
+        Extending an image beyond its original boundaries.
+      </p>
+    </details>
+
+    <details>
+      <summary>8. What is a Seed?</summary>
+      <p>
+        A value that can influence random initialization
+        in supported generation systems.
+      </p>
+    </details>
+
+    <details>
+      <summary>9. What is Upscaling?</summary>
+      <p>
+        Increasing image dimensions using an image-scaling
+        or enhancement process.
+      </p>
+    </details>
+
+    <details>
+      <summary>10. Does upscaling guarantee accurate new details?</summary>
+      <p>
+        No. Some upscalers synthesize details, which may
+        not represent the original subject accurately.
+      </p>
+    </details>
+
+    <details>
+      <summary>11. Why should you check generated text and logos?</summary>
+      <p>
+        AI image generation may produce incorrect spelling,
+        shapes or brand details.
+      </p>
+    </details>
+
+    <details>
+      <summary>12. Why compare different image models?</summary>
+      <p>
+        Different models can have different strengths,
+        controls, output quality and costs.
+      </p>
+    </details>
+
+  </section>
+
+
+  <!-- COMPLETION -->
+
+  <section id="completion">
+
+    <div class="lesson-label">MODULE REVIEW</div>
+    <h2>Module 05 Completion Checklist</h2>
+
+    <div class="lesson-card">
+      <ul>
+        <li>Understand text-to-image generation.</li>
+        <li>Understand image-to-image workflows.</li>
+        <li>Understand image models and model selection.</li>
+        <li>Complete a text-to-image workflow.</li>
+        <li>Understand aspect ratios and resolutions.</li>
+        <li>Practice reference-image workflows.</li>
+        <li>Understand variations and seeds.</li>
+        <li>Create portrait images.</li>
+        <li>Create product advertisements.</li>
+        <li>Create environment concepts.</li>
+        <li>Understand inpainting and outpainting.</li>
+        <li>Understand upscaling and export.</li>
+        <li>Complete at least two practical projects.</li>
+        <li>Review all quiz answers.</li>
+      </ul>
+
+      <p>
+        Interactive model comparison, image prompt builder,
+        downloadable worksheets, video tutorials and
+        automatic progress tracking will be connected
+        in later development.
+      </p>
+    </div>
+
+  </section>
+
+
+  <!-- OFFICIAL REFERENCES -->
+
+  <section id="references">
+
+    <div class="lesson-label">FURTHER LEARNING</div>
+    <h2>Official Learning Resources</h2>
+
+    <ul>
+      <li>
+        <a href="https://higgsfield.ai/"
+           target="_blank" rel="noopener noreferrer">
+          Higgsfield Official Platform
+        </a>
+      </li>
+
+      <li>
+        <a href="https://higgsfield.ai/creator-hub"
+           target="_blank" rel="noopener noreferrer">
+          Higgsfield Creator Hub
+        </a>
+      </li>
+
+      <li>
+        <a href="https://higgsfield.ai/creator-hub/help-center"
+           target="_blank" rel="noopener noreferrer">
+          Higgsfield Help Center
+        </a>
+      </li>
+    </ul>
+
+    <p>
+      Model names, available settings and generation workflows
+      can change. Verify the selected model's current
+      documentation before following model-specific instructions.
+    </p>
+
+  </section>
+
+
+  <footer class="lesson-footer">
+    <a href="../index.html">← Back to AI Creator School</a>
+
+    <p>AI Creator School · Learn. Create. Master.</p>
+    <p>Independent Telugu + English AI Education Platform.</p>
+  </footer>
+
+</main>
+
+<script src="../script.js"></script>
+
+</body>
+</html>
